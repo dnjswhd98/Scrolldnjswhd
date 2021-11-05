@@ -62,6 +62,11 @@ public class PlayerControler : MonoBehaviour
             Ver * Speed * Time.deltaTime
             );
 
+        if(Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            this.transform.Rotation(Vector3.up);
+        }
+
         if(Input.GetKeyDown(KeyCode.Space))
         {
             //Instantiate() == 복제(Clone) 함수
