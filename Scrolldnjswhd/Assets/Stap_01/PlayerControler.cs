@@ -50,10 +50,17 @@ public class PlayerControler : MonoBehaviour
 
     private List<GameObject> BulletList = new List<GameObject>();
 
-    // Update is called once per frame
+    private GameObject Bulletparent = null;
+
+    private void Awake()
+    {
+        Bulletparent = new GameObject("BulletList");
+    }
+
     void Update()
     {
         float Hor = Input.GetAxisRaw("Horizontal");
+        float MHor = Input.GetAxisRaw("Horizontal");
         float Ver = Input.GetAxisRaw("Vertical");
 
         this.transform.Translate(
@@ -62,18 +69,24 @@ public class PlayerControler : MonoBehaviour
             Ver * Speed * Time.deltaTime
             );
 
-        if(Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            this.transform.Rotation(Vector3.up);
-        }
+        //if(Input.GetKey(KeyCode.RightArrow))
+        //{
+        //    this.transform.Rotate(Vector3.up, Hor);
+        //}
+        //if (Input.GetKey(KeyCode.LeftArrow))
+        //{
+        //    this.transform.Rotate(Vector3.up, MHor);
+        //}
 
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             //Instantiate() == 복제(Clone) 함수
             GameObject Bullet = Instantiate(Bulletobj);
             Bullet.transform.position = transform.position;
 
             Bullet.GetComponent<Rigidbody>().useGravity = false;
+
+            Bullet.transform.parent = Bulletparent.transform;
 
             BulletList.Add(Bullet);
         }

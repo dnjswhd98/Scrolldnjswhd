@@ -9,12 +9,24 @@ public class BulletController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        this.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.forward * 2000.0f);
+        this.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.forward * 200.0f);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    if (collision.transform.name == "Wall")
+    //        Destroy(this.gameObject);
+    //}
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.transform.name == "Wall")
-            Destroy(this.gameObject);
+        Debug.Log("충돌");
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        Debug.Log("충돌중...");
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        Debug.Log("충돌 종료");
     }
 }
