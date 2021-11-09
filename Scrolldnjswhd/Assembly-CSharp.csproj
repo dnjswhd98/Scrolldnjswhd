@@ -54,12 +54,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Stap_05\Singleton.cs" />
+    <Compile Include="Assets\Stap_02\SempleCollision.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\SpringCollider.cs" />
     <Compile Include="Assets\Stap_01\PlayerControler.cs" />
     <Compile Include="Assets\Stap_01\BulletController.cs" />
     <Compile Include="Assets\Stap_03\SunCountroller.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\SpringManager.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\RandomWind.cs" />
+    <Compile Include="Assets\Stap_05\SampleSingletonTest.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\IKCtrlRightHand.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\IdleChanger.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\ThirdPersonCamera.cs" />
@@ -67,11 +70,11 @@
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\UnityChanControlScriptWithRgidBody.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\FaceUpdate.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\SplashScreen\Scripts\SplashScreen.cs" />
-    <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\SpringBone.cs" />
     <Compile Include="Assets\Stap_04\SampleRatate.cs" />
-    <Compile Include="Assets\Stap_05\Singleton.cs" />
-    <Compile Include="Assets\Stap_05\SampleSingletonTest.cs" />
-    <Compile Include="Assets\Stap_02\SempleCollision.cs" />
+    <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\SpringBone.cs" />
+    <Compile Include="Assets\Stap_06\ObjectManager.cs" />
+    <Compile Include="Assets\Stap_06\SamplePlayerController.cs" />
+    <Compile Include="Assets\Stap_06\SampleBulletController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />

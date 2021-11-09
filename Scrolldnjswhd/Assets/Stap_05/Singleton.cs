@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//1,2
+//public class Singleton
 public class Singleton : MonoBehaviour
 {
     //ΩÃ±€≈Ê1

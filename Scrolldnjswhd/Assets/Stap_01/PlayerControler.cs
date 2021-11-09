@@ -60,7 +60,6 @@ public class PlayerControler : MonoBehaviour
     void Update()
     {
         float Hor = Input.GetAxisRaw("Horizontal");
-        float MHor = Input.GetAxisRaw("Horizontal");
         float Ver = Input.GetAxisRaw("Vertical");
 
         this.transform.Translate(
@@ -75,7 +74,7 @@ public class PlayerControler : MonoBehaviour
         //}
         //if (Input.GetKey(KeyCode.LeftArrow))
         //{
-        //    this.transform.Rotate(Vector3.up, MHor);
+        //    this.transform.Rotate(Vector3.up, Hor);
         //}
 
         if (Input.GetKeyDown(KeyCode.Space))
