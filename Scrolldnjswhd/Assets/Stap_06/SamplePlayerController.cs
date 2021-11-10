@@ -42,15 +42,6 @@ public class SamplePlayerController : MonoBehaviour
             Ver * Speed * Time.deltaTime
             );
 
-        //if(Input.GetKey(KeyCode.RightArrow))
-        //{
-        //    this.transform.Rotate(Vector3.up, Hor);
-        //}
-        //if (Input.GetKey(KeyCode.LeftArrow))
-        //{
-        //    this.transform.Rotate(Vector3.up, Hor);
-        //}
-
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (ObjectManager.GetInstance().GetDisableList.Count == 0)
