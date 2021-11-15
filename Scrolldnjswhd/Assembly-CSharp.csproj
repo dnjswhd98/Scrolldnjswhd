@@ -57,7 +57,9 @@
     <Compile Include="Assets\Stap_05\Singleton.cs" />
     <Compile Include="Assets\06-1\MoveB.cs" />
     <Compile Include="Assets\Stap_02\SempleCollision.cs" />
+    <Compile Include="Assets\Stap_07\SingletonParent.cs" />
     <Compile Include="Assets\Stap_06\SamplePlayerController.cs" />
+    <Compile Include="Assets\Stap_07\BulletCtrl.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\SpringCollider.cs" />
     <Compile Include="Assets\Stap_01\PlayerControler.cs" />
     <Compile Include="Assets\Stap_01\BulletController.cs" />
@@ -71,16 +73,15 @@
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\AutoBlink.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\UnityChanControlScriptWithRgidBody.cs" />
     <Compile Include="Assets\06-1\MoveP.cs" />
+    <Compile Include="Assets\Stap_07\SampleObjectManager.cs" />
+    <Compile Include="Assets\Stap_07\PlayerCtrl.cs" />
     <Compile Include="Assets\Stap_06\SampleBulletController.cs" />
     <Compile Include="Assets\Stap_06\ObjectManager.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\FaceUpdate.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\SplashScreen\Scripts\SplashScreen.cs" />
     <Compile Include="Assets\Stap_04\SampleRatate.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\SpringBone.cs" />
-    <Compile Include="Assets\Stap_07\SingletonParent.cs" />
-    <Compile Include="Assets\Stap_07\SampleObjectManager.cs" />
-    <Compile Include="Assets\Stap_07\PlayerCtrl.cs" />
-    <Compile Include="Assets\Stap_07\BulletCtrl.cs" />
+    <Compile Include="Assets\Stap_08\InsfacterAddAdeter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />

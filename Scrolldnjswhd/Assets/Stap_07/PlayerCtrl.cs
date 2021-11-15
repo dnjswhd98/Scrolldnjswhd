@@ -8,6 +8,7 @@ public class PlayerCtrl : MonoBehaviour
     [SerializeField] private GameObject BulletPrefab = null;
     private GameObject BulletParent = null;
     private int Count;
+    private bool jumpM;
 
     private void Awake()
     {
@@ -18,6 +19,7 @@ public class PlayerCtrl : MonoBehaviour
     {
         Speed = 5.0f;
         Count = 0;
+        jumpM = false;
 
         Rigidbody BulletRigid = BulletPrefab.GetComponent<Rigidbody>();
         BulletRigid.useGravity = false;
@@ -59,11 +61,13 @@ public class PlayerCtrl : MonoBehaviour
             SampleObjectManager.GetInstance.GetEnableList.Add(Bullet);
         }
 
-        if(Input.GetKeyDown(KeyCode.Z))
+        if(Input.GetKeyDown(KeyCode.Z) && jumpM == false)
         {
             GetComponent<Rigidbody>().useGravity = true;
 
             GetComponent<Rigidbody>().AddForce(Vector3.up * 500);
+
+            jumpM = true;
         }
     }
 
@@ -72,6 +76,14 @@ public class PlayerCtrl : MonoBehaviour
         if(collision.transform.tag == "Graund")
         {
             GetComponent<Rigidbody>().useGravity = false;
+            //GetComponent<Rigidbody>().velocity = Vector3.zero;
+            jumpM = false;
         }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        GetComponent<Rigidbody>().useGravity = true;
+        jumpM = true;
     }
 }
