@@ -53,7 +53,7 @@ public class InsfacterAddAdeter : MonoBehaviour,IDragHandler, IPointerDownHandle
     void Update()
     {
         if (TouchCheck)
-            Target.position = Stick.position;
+            Target.position = Movement;
     }
 
     private void GetMovemect(Vector2 _Point)
