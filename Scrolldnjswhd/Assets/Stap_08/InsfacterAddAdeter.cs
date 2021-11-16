@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class InsfacterAddAdeter : MonoBehaviour,IDragHandler, IPointerDownHandler,IPointerUpHandler
+public class InsfacterAddAdeter : MonoBehaviour,IDragHandler, IPointerUpHandler,IPointerDownHandler
 {
     /*
     [Header("Element")]
@@ -32,7 +32,7 @@ public class InsfacterAddAdeter : MonoBehaviour,IDragHandler, IPointerDownHandle
     [SerializeField] private RectTransform BackBoard;
 
     //뒷배경의 반지름
-    private float Radius;
+    private float Radius = 0.0f;
     //입력 확인
     private bool TouchCheck = false;
     //이동속도
@@ -53,17 +53,17 @@ public class InsfacterAddAdeter : MonoBehaviour,IDragHandler, IPointerDownHandle
     void Update()
     {
         if (TouchCheck)
-            Target.position = Movement;
+            Target.position += Movement;
     }
 
     private void GetMovemect(Vector2 _Point)
     {
-        Stick.position = new Vector2(
+        Stick.localPosition = new Vector2(
             _Point.x - BackBoard.position.x,
             _Point.y - BackBoard.position.y);
 
         //스틱이 백보드를 벗어나지 않도록 해준다
-        Stick.position = Vector2.ClampMagnitude(Stick.localPosition, Radius);
+        Stick.localPosition = Vector2.ClampMagnitude(Stick.localPosition, Radius);
 
         //비율을 구함
         float Ratio = (BackBoard.position - Stick.position).sqrMagnitude / (Radius * Radius);

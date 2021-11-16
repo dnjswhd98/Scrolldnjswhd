@@ -38,7 +38,7 @@ public class PlayerCtrl : MonoBehaviour
             0.0f,
             Ver * Speed * Time.deltaTime);
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Return))
         {
             //Debug.Log(SampleObjectManager.GetInstance.name);
             if (SampleObjectManager.GetInstance.GetDisableList.Count == 0)
