@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class RayPoint : MonoBehaviour
 {
+    public GameObject MainCamera;
+    [SerializeField]private GameObject Cubeprefab;
+
+    private void Awake()
+    {
+        MainCamera = GameObject.Find("Main Camera");
+        Cubeprefab = Resources.Load("Prefabs/Cube") as GameObject;
+    }
 
     void Update()
     {
@@ -29,10 +37,13 @@ public class RayPoint : MonoBehaviour
             if (Physics.Raycast(ray, out hit, Mathf.Infinity))
             {
                 //DrawLine(Vector3 start, Vector3 end, Color color);
-                Debug.DrawLine(Camera.main.transform.position, Vector3.forward * 0.5f, Color.red, 0.2f);
+                //Debug.DrawLine(Camera.main.transform.position, Vector3.forward * 0.5f, Color.red, 0.2f);
 
-                if (hit.transform.tag == "Enemy")
-                    Debug.Log("Enemy" + hit.transform.name + "를 찾았습니다");
+                //if (hit.transform.tag == "Enemy")
+                //    Debug.Log("Enemy" + hit.transform.name + "를 찾았습니다");
+
+                GameObject Obj = Instantiate(Cubeprefab);
+                Obj.transform.position = hit.point;
             }
         }
     }
