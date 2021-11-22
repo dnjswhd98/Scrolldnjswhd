@@ -53,8 +53,9 @@
     <UnityVersion>2020.3.21f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Resources\Scripts\Stap_10\ViewAngleEditor.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\CameraController.cs" />
-    <Compile Include="Assets\Resources\Scripts\MyGizmo.cs" />
+    <Compile Include="Assets\Resources\Scripts\Stap_10\MyGizmo.cs" />
     <Compile Include="Assets\Stap_05\Singleton.cs" />
     <Compile Include="Assets\06-1\MoveB.cs" />
     <Compile Include="Assets\Stap_02\SempleCollision.cs" />
@@ -82,10 +83,11 @@
     <Compile Include="Assets\Stap_06\ObjectManager.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\FaceUpdate.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\SplashScreen\Scripts\SplashScreen.cs" />
+    <Compile Include="Assets\Resources\Scripts\Stap_10\ViewAngle.cs" />
     <Compile Include="Assets\Stap_04\SampleRatate.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\SpringBone.cs" />
-    <Compile Include="Assets\Resources\Scripts\ViewAngle.cs" />
-    <Compile Include="Assets\Resources\Scripts\ViewAngleEditor.cs" />
+    <Compile Include="Assets\Resources\Scripts\Stap_11\WayPoint.cs" />
+    <Compile Include="Assets\Resources\Scripts\Stap_11\WayLine.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
