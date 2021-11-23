@@ -7,6 +7,7 @@ TagManager:
   - Wall
   - Graund
   - Enemy
+  - WayPoint
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - Target
   - Obstacle
   - 
-  - 
+  - WayPoint
   - 
   - 
   - 
