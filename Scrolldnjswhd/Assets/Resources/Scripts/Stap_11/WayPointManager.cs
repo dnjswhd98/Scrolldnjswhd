@@ -18,27 +18,35 @@ public class WayPointManager : MonoBehaviour
         }
         return Instance;
     }
+    [HideInInspector] public GameObject EnemyPrefab;
     [Tooltip("NodePrefab")]
     [HideInInspector] public GameObject WayPointList;
     [HideInInspector] public Vector2 PointA;
     [HideInInspector] public Vector2 PointB;
 
-    [HideInInspector] public Vector2 TargetPoint;
+    [HideInInspector] public int NodeNumber;
+
+    [HideInInspector] public Vector3 TargetPoint;
 
     [HideInInspector] public List<GameObject> NodeList = new List<GameObject>();
 
     private void Awake()
     {
+        EnemyPrefab = Resources.Load("Prefabs/Stap_11/Enemy") as GameObject;
         WayPointList = Resources.Load("Prefabs/Stap_11/WayPointList") as GameObject;
+        NodeList = new List<GameObject>();
     }
 
     private void Start()
     {
-        for(int i = 0; i < 10; ++i)
+        NodeNumber = 0;
+
+        TargetPoint = new Vector3(0.0f, 0.0f,0.0f);
+        for(int i = 0; i < 1; ++i)
         {
             GameObject Obj = Instantiate(WayPointList);
-
-            Obj.transform.position = new Vector3(Random.Range(-20,20), 0.0f, Random.Range(-20,20));
+        
+            //Obj.transform.position = new Vector3(Random.Range(-20,20), 0.0f, Random.Range(-20,20));
         }
     }
     /* 시간마다 생성하게 하는 방법

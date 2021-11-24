@@ -45,5 +45,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Radius: {x: 5, y: 5}
   WayPointprefab: {fileID: 0}
+  Enemyprefab: {fileID: 0}
   WayPointCount: 5
   WayPointList: []
+  Direction: 0
+  fTime: 0

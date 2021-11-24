@@ -9,20 +9,20 @@ public class WayPoint : MonoBehaviour
     public GameObject WayPointprefab;
     [SerializeField]private GameObject Enemyprefab;
     [SerializeField]private int WayPointCount = 0;
-    [SerializeField]private int NodeNum = 0;
 
     public List<GameObject> WayPointList = new List<GameObject>();
+
+    [SerializeField]private int Direction;
+    [SerializeField]private float fTime = 1.0f;
 
     private void Awake()
     {
         WayPointprefab = Resources.Load("Prefabs/Stap_11/WayPointPrefab") as GameObject;
-        Enemyprefab = Resources.Load("Prefabs/Stap_11/Enemy") as GameObject;
     }
 
     void Start()
     {
-        NodeNum = 0;
-
+        StartCoroutine("EnemyCreate");
         WayPointManager.GetInstance().PointA = new Vector2(transform.position.x - Radius.x, transform.position.z + Radius.y);
         WayPointManager.GetInstance().PointB = new Vector2(transform.position.x + Radius.x, transform.position.z - Radius.y);
 
@@ -40,18 +40,17 @@ public class WayPoint : MonoBehaviour
                 5.0f,
                 Random.Range(WayPointManager.GetInstance().PointA.y, WayPointManager.GetInstance().PointB.y));
             WayPointList.Add(Obj);
+
+            int NodeNumber = WayPointManager.GetInstance().NodeNumber;
+
+            WayPointManager.GetInstance().TargetPoint = WayPointList[NodeNumber].transform.position;
         }
     }
 
-    private void Update()
+    IEnumerator EnemyCreate()
     {
-        //WayPointList[NodeNum]
-
-        ++NodeNum;
-
-        if(NodeNum > (WayPointList.Count - 1))
-        {
-
-        }
+        yield return new WaitForSeconds(fTime);
+        GameObject Enemy = Instantiate(WayPointManager.GetInstance().EnemyPrefab);
+        Enemy.transform.position = WayPointManager.GetInstance().WayPointList.transform.position;
     }
 }
