@@ -74,6 +74,7 @@
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\SpringManager.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\RandomWind.cs" />
     <Compile Include="Assets\Resources\Scripts\Stap_11\GameManager.cs" />
+    <Compile Include="Assets\Resources\Scripts\Stap_12\MyCoroutine.cs" />
     <Compile Include="Assets\Stap_05\SampleSingletonTest.cs" />
     <Compile Include="Assets\Resources\Scripts\Stap_11\WayPointBase.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\IKCtrlRightHand.cs" />
@@ -93,10 +94,9 @@
     <Compile Include="Assets\Resources\Scripts\Stap_11\WayLine.cs" />
     <Compile Include="Assets\Resources\Scripts\Stap_10\ViewAngle.cs" />
     <Compile Include="Assets\Resources\Scripts\Stap_11\WayPointManager.cs" />
+    <Compile Include="Assets\Resources\Scripts\Stap_12\CreateCube.cs" />
     <Compile Include="Assets\Stap_04\SampleRatate.cs" />
     <Compile Include="Assets\unity-chan!\Unity-chan! Model\Scripts\SpringBone.cs" />
-    <Compile Include="Assets\Resources\Scripts\Stap_12\MyCoroutine.cs" />
-    <Compile Include="Assets\Resources\Scripts\Stap_12\CreateCube.cs" />
     <None Include="Assets\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
     <None Include="Assets\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_akarami_blend.shader" />
     <None Include="Assets\unity-chan!\Unity-chan! Model\Art\UnityChanShader\Shader\Unitychan_chara_hair_ds.shader" />

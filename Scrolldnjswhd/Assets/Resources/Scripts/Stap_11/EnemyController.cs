@@ -57,7 +57,7 @@ public class EnemyController : MonoBehaviour
             ++NodeNumber;
             Moving = false;
 
-            if(NodeNumber > 2)
+            if(NodeNumber < 2)
             {
 
             }
