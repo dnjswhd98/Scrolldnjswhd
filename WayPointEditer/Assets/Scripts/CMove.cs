@@ -9,12 +9,12 @@ public class CMove : MonoBehaviour
     [SerializeField] private GameObject Target;
     private int num;
 
-    void Start()
-    {
-        Speed = 5.0f;
-        num = 0;
-        Target = GameObject.Find("Node " + num);
-    }
+    //void Start()
+    //{
+    //    Speed = 5.0f;
+    //    num = gSingleton.GetInstance().NodeList.Count;
+    //    Target = GameObject.Find("Node " + num);
+    //}
 
     void Update()
     {
@@ -24,10 +24,6 @@ public class CMove : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.transform.tag == "Target")
-        {
-            Debug.Log("adas");
-            GameObject.Find("Node " + num);
-        }
+        Debug.Log("asdf");
     }
 }
