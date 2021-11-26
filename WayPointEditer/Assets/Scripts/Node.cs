@@ -6,6 +6,16 @@ using UnityEditor;
 public class Node : MonoBehaviour
 {
     public Node NextNode;
+    public int Index;
+
+    private void Start()
+    {
+        transform.tag = "Node";
+
+        SphereCollider Coll = transform.GetComponent<SphereCollider>();
+
+        Coll.radius = 0.2f;
+    }
 }
 
 [CustomEditor(typeof(Node))]

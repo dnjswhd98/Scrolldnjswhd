@@ -42,28 +42,37 @@ public class WayPointEditor : EditorWindow
 
     public void CreateNode()
     {
-        GameObject NodeObj = new GameObject("Node " + PerentNode.transform.childCount);
-        NodeObj.gameObject.tag = "Target";
-        NodeObj.transform.parent = PerentNode.transform;
-
-        NodeObj.AddComponent<GetGizmo>();
-        NodeObj.AddComponent<Node>();
-        NodeObj.AddComponent<SphereCollider>();
-
-        NodeObj.transform.position = new Vector3(Random.Range(-5.0f, 5.0f), 0.0f, Random.Range(-5.0f, 5.0f));
-        gSingleton.GetInstance().NodePos = NodeObj.transform.position;
-
-        Node node = NodeObj.GetComponent<Node>();
-        gSingleton.GetInstance().NodeList.Add(NodeObj);
-
-        if(PerentNode.transform.childCount > 1)
+        while (true)
         {
-            node.NextNode = PerentNode.transform.GetChild(PerentNode.transform.childCount - 2).GetComponent<Node>();
+            GameObject NodeObj = new GameObject("Node " + PerentNode.transform.childCount);
+            NodeObj.transform.parent = PerentNode.transform;
 
-            GameObject FirstObject = GameObject.Find("Node" + 0);
+            NodeObj.AddComponent<GetGizmo>();
+            NodeObj.AddComponent<SphereCollider>();
+            Node CurrentNode = NodeObj.AddComponent<Node>();
 
-            Node FirstNode = FirstObject.GetComponent<Node>();
-            FirstNode.NextNode = node;
+            CurrentNode.Index = PerentNode.transform.childCount;
+
+            NodeObj.transform.position = new Vector3(Random.Range(-20.0f, 20.0f), 0.0f, Random.Range(-20.0f, 20.0f));
+
+            float Distance = 1000.0f;
+
+            Node node = NodeObj.GetComponent<Node>();
+            gSingleton.GetInstance().NodeList.Add(NodeObj);
+
+            if (PerentNode.transform.childCount > 1)
+            {
+                Node PreviousNode = PerentNode.transform.GetChild(PerentNode.transform.childCount - 2).GetComponent<Node>();
+
+                PreviousNode.NextNode = PerentNode.transform.GetChild(PerentNode.transform.childCount - 1).GetComponent<Node>();
+
+                CurrentNode.NextNode = PerentNode.transform.GetChild(0).GetComponent<Node>();
+
+                Distance = Vector3.Distance(PreviousNode.transform.position, CurrentNode.transform.position);
+            }
+
+            if (Distance > 1.5f)
+                break;
         }
     }
 }
