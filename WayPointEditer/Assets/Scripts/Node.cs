@@ -13,6 +13,9 @@ public class Node : MonoBehaviour
         transform.tag = "Node";
 
         SphereCollider Coll = transform.GetComponent<SphereCollider>();
+        Coll.isTrigger = true;
+        Rigidbody Rigid = transform.GetComponent<Rigidbody>();
+        Rigid.useGravity = false;
 
         Coll.radius = 0.2f;
     }

@@ -49,11 +49,12 @@ public class WayPointEditor : EditorWindow
 
             NodeObj.AddComponent<GetGizmo>();
             NodeObj.AddComponent<SphereCollider>();
+            NodeObj.AddComponent<Rigidbody>();
             Node CurrentNode = NodeObj.AddComponent<Node>();
 
             CurrentNode.Index = PerentNode.transform.childCount;
 
-            NodeObj.transform.position = new Vector3(Random.Range(-20.0f, 20.0f), 0.0f, Random.Range(-20.0f, 20.0f));
+            NodeObj.transform.position = new Vector3(Random.Range(-20.0f, 20.0f), 1.0f, Random.Range(-20.0f, 20.0f));
 
             float Distance = 1000.0f;
 

@@ -78,7 +78,7 @@ public class CameraContriollor : MonoBehaviour
             this.transform.position.y + CameraPos.y,
             this.transform.position.z);
 
-        //MinimapCamera.transform.position = CurrentCameraPos;
+        //MinimapCamera.transform.position = CurrentCamera;
     }
 
     void StopShake()

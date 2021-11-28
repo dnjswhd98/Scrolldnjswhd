@@ -25,7 +25,7 @@ public class EnemyController : MonoBehaviour
         CapsuleCollider Coll = transform.GetComponent<CapsuleCollider>();
 
         Coll.center = new Vector3(0.0f, 1.0f, 0.0f);
-        Coll.radius = 2.0f;
+        Coll.radius = 1.0f;
 
         Coll.isTrigger = true;
         StartCoroutine("NodeChecking");
@@ -47,9 +47,10 @@ public class EnemyController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-       if(TargetNode && other.transform.name == ("Node" + TargetNode.transform.childCount))
+       if(TargetNode && other.transform.name == ("Node " + (TargetNode.Index - 1)))
         {
             TargetNode = TargetNode.NextNode;
+            Debug.Log(TargetNode.Index);
         }
     }
 
@@ -64,6 +65,8 @@ public class EnemyController : MonoBehaviour
                 Moving = true;
 
                 TargetNode = ParentObj.transform.GetChild(0).GetComponent<Node>();
+
+                Debug.Log(TargetNode.Index);
 
                 break;
             }
