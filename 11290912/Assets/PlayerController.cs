@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         float Hor = Input.GetAxisRaw("Horizontal");
+        float Ver;
 
         if (Hor != 0)
         {
@@ -41,8 +42,19 @@ public class PlayerController : MonoBehaviour
 
         transform.Translate(new Vector3(Hor * 5.0f * Time.deltaTime,0.0f,0.0f));
 
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            GetComponent<Rigidbody2D>().AddForce(Vector3.up * 300.0f);
+            Ver = 1.0f;
+        }
+
         //if (Hor < 0)
         //    Hor *= -1;
         Anime.SetFloat("Hor", Hor);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        
     }
 }
