@@ -6,7 +6,6 @@ public class PlayerController : MonoBehaviour
 {
     private void Awake()
     {
-        SoundManager.GetInstance.Initialize();
     }
     void Update()
     {

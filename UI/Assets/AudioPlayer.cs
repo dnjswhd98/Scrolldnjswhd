@@ -9,11 +9,14 @@ public class AudioPlayer : MonoBehaviour
 
     private void Awake()
     {
-        //SoundPlayer = SoundManager.GetInstance.GetAudioClip(0);
+        SoundManager.GetInstance.Initialize();
+        SoundPlayer = new AudioSource();
+        SoundPlayer.clip = SoundManager.GetInstance.GetAudioClip(1);
     }
 
     void Start()
     {
+        Debug.Log(SoundPlayer.clip.name);
         PlaySound();
     }
 

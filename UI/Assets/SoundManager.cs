@@ -16,7 +16,7 @@ public class SoundManager
         }
     }
 
-    private List<AudioClip> Soundlist = new List<AudioClip>();
+    public List<AudioClip> Soundlist = new List<AudioClip>();
     //private AudioSource AudioPlayer = null;
 
     public void Initialize()
@@ -29,15 +29,15 @@ public class SoundManager
         }
     }
 
-    public AudioSource GetAudioClip(int _Index)
+    public AudioClip GetAudioClip(int _Index)
     {
         if (_Index >= Soundlist.Count)
         {
             Debug.Log("재생 가능한 사운드가 없습니다. Index : " + _Index + "최대 Index : " + (Soundlist.Count - 1));
         }
-        AudioSource Source = new AudioSource();
+        AudioClip Source = Soundlist[_Index];//new AudioSource();
 
-        Source.clip = Soundlist[_Index];
+        //Source.clip = Soundlist[_Index];
 
         return Source;
     }
