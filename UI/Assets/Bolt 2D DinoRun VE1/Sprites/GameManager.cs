@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        CameraSpeed = 2.0f;
+        CameraSpeed = 3.0f;
     }
     void Update()
     {

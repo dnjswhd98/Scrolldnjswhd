@@ -7,39 +7,49 @@ public class DinoCon : MonoBehaviour
     [SerializeField]private bool jump;
     [SerializeField]private bool dead;
     private float jumpSpeed;
+    Animator Anime;
 
     void Start()
     {
+        Anime = transform.GetComponent<Animator>();
         jump = false;
         dead = false;
-        jumpSpeed = 7000.0f;
+        jumpSpeed = 350.0f;
     }
-
+    
     void Update()
     {
-        if(Input.GetKey(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space) && !jump)
         {
-            if (jumpSpeed <= 10000.0f)
-            {
-                ++jumpSpeed;
-                jump = true;
-                GetComponent<Rigidbody2D>().AddForce(Vector3.up * jumpSpeed * Time.deltaTime);
-            }  
+            jump = true;
+            GetComponent<Rigidbody2D>().AddForce(Vector2.up * jumpSpeed);
         }
         
+        Anime.SetBool("Dead", dead);
+        Anime.SetBool("jump", jump);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.transform.tag == "Graund")
         {
-            jumpSpeed = 10000.0f;
+            jumpSpeed = 350.0f;
             jump = false;
         }
         if (collision.transform.tag == "Obj")
         {
             dead = true;
+            Debug.Log("dead");
         }
-
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.transform.tag == "Obj")
+        {
+            dead = true;
+            Debug.Log("dead");
+        }
+    }
+    public bool getDead() { return dead; }
 }
