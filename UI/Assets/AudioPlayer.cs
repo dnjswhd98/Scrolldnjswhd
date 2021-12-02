@@ -11,7 +11,7 @@ public class AudioPlayer : MonoBehaviour
     {
         SoundManager.GetInstance.Initialize();
         SoundPlayer = new AudioSource();
-        SoundPlayer.clip = SoundManager.GetInstance.GetAudioClip(1);
+        SoundPlayer.clip = SoundManager.GetInstance.GetAudioClip(0);
     }
 
     void Start()
