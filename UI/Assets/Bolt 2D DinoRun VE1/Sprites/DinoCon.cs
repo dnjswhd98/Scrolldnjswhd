@@ -5,12 +5,14 @@ using UnityEngine;
 public class DinoCon : MonoBehaviour
 {
     [SerializeField]private bool jump;
-    [SerializeField]private bool dead;
+    static public bool dead;
     private float jumpSpeed;
-    Animator Anime;
+    private Animator Anime;
+    static public Rigidbody2D rigid2d;
 
     void Start()
     {
+        rigid2d = GetComponent<Rigidbody2D>();
         Anime = transform.GetComponent<Animator>();
         jump = false;
         dead = false;
@@ -39,17 +41,7 @@ public class DinoCon : MonoBehaviour
         if (collision.transform.tag == "Obj")
         {
             dead = true;
-            Debug.Log("dead");
+            rigid2d.constraints = RigidbodyConstraints2D.FreezeAll;
         }
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.transform.tag == "Obj")
-        {
-            dead = true;
-            Debug.Log("dead");
-        }
-    }
-    public bool getDead() { return dead; }
 }
