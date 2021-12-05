@@ -58,6 +58,7 @@
     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightIntensityFade.cs" />
     <Compile Include="Assets\Joystick\Script\InspectorEditor.cs" />
     <Compile Include="Assets\AudioPlayer.cs" />
+    <Compile Include="Assets\asdf.cs" />
     <Compile Include="Assets\CanvasActive.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoRotate.cs" />
     <Compile Include="Assets\Bolt 2D DinoRun VE1\Sprites\BackController.cs" />
@@ -65,6 +66,7 @@
     <Compile Include="Assets\Bolt 2D DinoRun VE1\Sprites\DinoCon.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_RandomDir.cs" />
+    <Compile Include="Assets\Bolt 2D DinoRun VE1\Sprites\Score.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_Translate.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX\Demo\Assets\CFX_Demo_New.cs" />
     <Compile Include="Assets\SoundManager.cs" />
@@ -72,10 +74,9 @@
     <Compile Include="Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoDestructShuriken.cs" />
     <Compile Include="Assets\MySkill.cs" />
     <Compile Include="Assets\BulletController.cs" />
-    <Compile Include="Assets\Bolt 2D DinoRun VE1\Sprites\GameManager.cs" />
-    <Compile Include="Assets\asdf.cs" />
-    <Compile Include="Assets\Bolt 2D DinoRun VE1\Sprites\Score.cs" />
     <Compile Include="Assets\Bolt 2D DinoRun VE1\Sprites\ObjectManager.cs" />
+    <Compile Include="Assets\Bolt 2D DinoRun VE1\Sprites\GameManager.cs" />
+    <Compile Include="Assets\Bolt 2D DinoRun VE1\Sprites\ActSound.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\JMO Assets\Cartoon FX\Shaders\CFX3 Multiply Color.shader" />

@@ -1,0 +1,960 @@
+fileFormatVersion: 2
+guid: 31feaa3de1746b546805c3cb40dc8bca
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3041302288927065706
+    second: sprWeapons_strip35_0
+  - first:
+      213: 8314936473662094007
+    second: sprWeapons_strip35_1
+  - first:
+      213: 6879940644303043458
+    second: sprWeapons_strip35_2
+  - first:
+      213: -772093875959297659
+    second: sprWeapons_strip35_3
+  - first:
+      213: -1855954010262921414
+    second: sprWeapons_strip35_4
+  - first:
+      213: 5051190748966478263
+    second: sprWeapons_strip35_5
+  - first:
+      213: 5767924840555705053
+    second: sprWeapons_strip35_6
+  - first:
+      213: 2715915417309968313
+    second: sprWeapons_strip35_7
+  - first:
+      213: 2848346492925972177
+    second: sprWeapons_strip35_8
+  - first:
+      213: 7615340503171100432
+    second: sprWeapons_strip35_9
+  - first:
+      213: 7597698409537028591
+    second: sprWeapons_strip35_10
+  - first:
+      213: 7916686294561797223
+    second: sprWeapons_strip35_11
+  - first:
+      213: -8676552379709262260
+    second: sprWeapons_strip35_12
+  - first:
+      213: -5247055826981906682
+    second: sprWeapons_strip35_13
+  - first:
+      213: 876980354234374231
+    second: sprWeapons_strip35_14
+  - first:
+      213: 8321911026010290075
+    second: sprWeapons_strip35_15
+  - first:
+      213: -6904427604097458097
+    second: sprWeapons_strip35_16
+  - first:
+      213: 1809228625216846130
+    second: sprWeapons_strip35_17
+  - first:
+      213: -5414723489067417953
+    second: sprWeapons_strip35_18
+  - first:
+      213: 6769922684065029319
+    second: sprWeapons_strip35_19
+  - first:
+      213: -687829513119380132
+    second: sprWeapons_strip35_20
+  - first:
+      213: 3050650657757535713
+    second: sprWeapons_strip35_21
+  - first:
+      213: 4308585081136226293
+    second: sprWeapons_strip35_22
+  - first:
+      213: 6751658050015461808
+    second: sprWeapons_strip35_23
+  - first:
+      213: -4882050975624643230
+    second: sprWeapons_strip35_24
+  - first:
+      213: -2220375483740000881
+    second: sprWeapons_strip35_25
+  - first:
+      213: 586142714170187913
+    second: sprWeapons_strip35_26
+  - first:
+      213: 3800456641741881753
+    second: sprWeapons_strip35_27
+  - first:
+      213: -6335342961330807097
+    second: sprWeapons_strip35_28
+  - first:
+      213: -86505722509685771
+    second: sprWeapons_strip35_29
+  - first:
+      213: -1644172015116912451
+    second: sprWeapons_strip35_30
+  - first:
+      213: -9106593108644200821
+    second: sprWeapons_strip35_31
+  - first:
+      213: -7510478632284056471
+    second: sprWeapons_strip35_32
+  - first:
+      213: 2460811558599625472
+    second: sprWeapons_strip35_33
+  - first:
+      213: -8909815229729651436
+    second: sprWeapons_strip35_34
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sprWeapons_strip35_0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 28
+        width: 33
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a66841a7150e43a20800000000000000
+      internalID: 3041302288927065706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeapons_strip35_1
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 28
+        width: 29
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ba719a1ba6946370800000000000000
+      internalID: 8314936473662094007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeapons_strip35_2
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 34
+        width: 29
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28b747380957a7f50800000000000000
+      internalID: 6879940644303043458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeapons_strip35_3
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 34
+        width: 24
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5890136e5b8f845f0800000000000000
+      internalID: -772093875959297659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeapons_strip35_4
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 33
+        width: 23
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3f11d239a35e36e0800000000000000
+      internalID: -1855954010262921414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeapons_strip35_5
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 34
+        width: 14
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b1e2ec493f691640800000000000000
+      internalID: 5051190748966478263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeapons_strip35_6
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 29
+        width: 30
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd2797c2519cb0050800000000000000
+      internalID: 5767924840555705053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeapons_strip35_7
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 31
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b774c8beaed0b520800000000000000
+      internalID: 2715915417309968313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeapons_strip35_8
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 30
+        width: 34
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1de051c4b0c578720800000000000000
+      internalID: 2848346492925972177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeapons_strip35_9
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 28
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01f682ff6df1fa960800000000000000
+      internalID: 7615340503171100432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeapons_strip35_10
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 30
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe1410bf272707960800000000000000
+      internalID: 7597698409537028591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeapons_strip35_11
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 29
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7643f819d38bddd60800000000000000
+      internalID: 7916686294561797223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeapons_strip35_12
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 26
+        width: 23
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c46fb5cb491b69780800000000000000
+      internalID: -8676552379709262260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeapons_strip35_13
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 34
+        width: 46
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60799148686be27b0800000000000000
+      internalID: -5247055826981906682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeapons_strip35_14
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 34
+        width: 28
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 758d2295cf8ab2c00800000000000000
+      internalID: 876980354234374231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeapons_strip35_15
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 28
+        width: 30
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b97ffbd9cfd5d7370800000000000000
+      internalID: 8321911026010290075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeapons_strip35_16
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 31
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f40ae50ecab8e20a0800000000000000
+      internalID: -6904427604097458097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeapons_strip35_17
+      rect:
+        serializedVersion: 2
+        x: 1036
+        y: 30
+        width: 27
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 239b48359dbab1910800000000000000
+      internalID: 1809228625216846130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeapons_strip35_18
+      rect:
+        serializedVersion: 2
+        x: 1097
+        y: 30
+        width: 31
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9e3c25dca90bd4b0800000000000000
+      internalID: -5414723489067417953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeapons_strip35_19
+      rect:
+        serializedVersion: 2
+        x: 1156
+        y: 31
+        width: 28
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cc1e8400d893fd50800000000000000
+      internalID: 6769922684065029319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeapons_strip35_20
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 31
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5d4d7cb3b65476f0800000000000000
+      internalID: -687829513119380132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeapons_strip35_21
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 31
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ed13753c96165a20800000000000000
+      internalID: 3050650657757535713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeapons_strip35_22
+      rect:
+        serializedVersion: 2
+        x: 1340
+        y: 28
+        width: 22
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ff1cadad4b2bcb30800000000000000
+      internalID: 4308585081136226293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeapons_strip35_23
+      rect:
+        serializedVersion: 2
+        x: 1402
+        y: 31
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b104148935b2bd50800000000000000
+      internalID: 6751658050015461808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeapons_strip35_24
+      rect:
+        serializedVersion: 2
+        x: 1462
+        y: 31
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26d3b8ef0887f3cb0800000000000000
+      internalID: -4882050975624643230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeapons_strip35_25
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 29
+        width: 20
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8de0b7f244af21e0800000000000000
+      internalID: -2220375483740000881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeapons_strip35_26
+      rect:
+        serializedVersion: 2
+        x: 1578
+        y: 28
+        width: 23
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9802cc961b5622800800000000000000
+      internalID: 586142714170187913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeapons_strip35_27
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 32
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9918c431e2fedb430800000000000000
+      internalID: 3800456641741881753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeapons_strip35_28
+      rect:
+        serializedVersion: 2
+        x: 1706
+        y: 33
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ce1b9b84275418a0800000000000000
+      internalID: -6335342961330807097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeapons_strip35_29
+      rect:
+        serializedVersion: 2
+        x: 1767
+        y: 33
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fb85c2f08baccef0800000000000000
+      internalID: -86505722509685771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeapons_strip35_30
+      rect:
+        serializedVersion: 2
+        x: 1829
+        y: 34
+        width: 8
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db87151734abe29e0800000000000000
+      internalID: -1644172015116912451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeapons_strip35_31
+      rect:
+        serializedVersion: 2
+        x: 1888
+        y: 33
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8efd3501d1ee9180800000000000000
+      internalID: -9106593108644200821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeapons_strip35_32
+      rect:
+        serializedVersion: 2
+        x: 1942
+        y: 32
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9641c85e97b65c790800000000000000
+      internalID: -7510478632284056471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeapons_strip35_33
+      rect:
+        serializedVersion: 2
+        x: 2004
+        y: 33
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00b8189131f862220800000000000000
+      internalID: 2460811558599625472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeapons_strip35_34
+      rect:
+        serializedVersion: 2
+        x: 2065
+        y: 27
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4154999314af95480800000000000000
+      internalID: -8909815229729651436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 8c436075176ff03439c3b1b8581dbec6
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
