@@ -53,13 +53,13 @@
     <UnityVersion>2020.3.23f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Resuorse\Script\Enemy\MafiaMovement\MafiaMove.cs" />
+    <Compile Include="Assets\Resuorse\Script\Singleton.cs" />
+    <Compile Include="Assets\Resuorse\Script\GameManager.cs" />
     <Compile Include="Assets\Resuorse\Script\JaketMovement\JaketMoving.cs" />
     <Compile Include="Assets\Resuorse\Script\JaketMovement\JaketLegMove.cs" />
     <Compile Include="Assets\Resuorse\Script\JaketMovement\JaketTop.cs" />
     <Compile Include="Assets\Resuorse\Script\MouseCurser\MouseCurser.cs" />
-    <Compile Include="Assets\Resuorse\Script\Enemy\MafiaMovement\MafiaMove.cs" />
-    <Compile Include="Assets\Resuorse\Script\GameManager.cs" />
-    <Compile Include="Assets\Resuorse\Script\Singleton.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -635,6 +635,9 @@
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Tilemap.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
@@ -664,9 +667,6 @@
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
