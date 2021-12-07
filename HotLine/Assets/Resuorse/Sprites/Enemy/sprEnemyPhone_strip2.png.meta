@@ -1,7 +1,13 @@
 fileFormatVersion: 2
 guid: 47b9bd90aada4c847abc781df144541e
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 8916343708509036177
+    second: sprEnemyPhone_strip2_0
+  - first:
+      213: -9035086322569590950
+    second: sprEnemyPhone_strip2_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -101,11 +107,53 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: sprEnemyPhone_strip2_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 5
+        width: 12
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19e58f0bc573dbb70800000000000000
+      internalID: 8916343708509036177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprEnemyPhone_strip2_1
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 5
+        width: 12
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a57cf3c0cdcec9280800000000000000
+      internalID: -9035086322569590950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 694761287fd802a41b4586c8c9faeb04
     internalID: 0
     vertices: []
     indices: 

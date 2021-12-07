@@ -6,7 +6,9 @@ public class JaketMoving : MonoBehaviour
 {
     private float Hor;
     private float Ver;
-    [SerializeField] float Speed;
+    [SerializeField]private float Speed;
+    [SerializeField]private int WeaponeNum;
+    private GameObject Mouse;
 
     float angle;
     Vector2 target, mouse;
@@ -19,12 +21,14 @@ public class JaketMoving : MonoBehaviour
 
     void Update()
     {
-        Hor = Input.GetAxis("Horizontal");
-        Ver = Input.GetAxis("Vertical");
-        transform.Translate(Hor*Speed, Ver*Speed, 0.0f);
+        Mouse = GameObject.Find("MouseCursor");
+        
+        if(Input.GetKey(KeyCode.W))
+        {
+            
+        }
 
-        mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        angle = Mathf.Atan2(mouse.y - target.y, mouse.x - target.x) * Mathf.Rad2Deg;
-        this.transform.rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
+        angle = Mathf.Atan2(Mouse.transform.position.y - target.y, Mouse.transform.position.x - target.x) * Mathf.Rad2Deg;
+        this.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
 }

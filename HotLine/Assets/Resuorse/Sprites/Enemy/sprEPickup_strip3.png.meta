@@ -1,7 +1,16 @@
 fileFormatVersion: 2
 guid: a57948d9334c86d46bec1ca2e0f0c77f
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 3391014941924125768
+    second: sprEPickup_strip3_0
+  - first:
+      213: -1297205088099040957
+    second: sprEPickup_strip3_1
+  - first:
+      213: -183000640285883442
+    second: sprEPickup_strip3_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -101,11 +110,74 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: sprEPickup_strip3_0
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 18
+        width: 13
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84ced619f1e4f0f20800000000000000
+      internalID: 3391014941924125768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprEPickup_strip3_1
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 18
+        width: 17
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 341070368d66ffde0800000000000000
+      internalID: -1297205088099040957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprEPickup_strip3_2
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 18
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec3471223e9d57df0800000000000000
+      internalID: -183000640285883442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 12e4213d823021144912f326b1906101
     internalID: 0
     vertices: []
     indices: 

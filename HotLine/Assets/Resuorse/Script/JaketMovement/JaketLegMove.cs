@@ -9,7 +9,6 @@ public class JaketLegMove : MonoBehaviour
     private float Hor;
     private float Ver;
     private Animator Anime;
-    private Transform targetPos;
 
     void Start()
     {
@@ -22,7 +21,6 @@ public class JaketLegMove : MonoBehaviour
         Hor = Input.GetAxis("Horizontal");
         Ver = Input.GetAxis("Vertical");
 
-        transform.LookAt(targetPos);
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.W))
         {
             Moving = true;

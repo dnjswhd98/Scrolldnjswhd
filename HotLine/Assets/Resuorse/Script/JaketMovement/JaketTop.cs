@@ -5,11 +5,13 @@ using UnityEngine;
 public class JaketTop : MonoBehaviour
 {
     private bool Moving;
-    private Animator Anime;
+    static public Animator Anime;
+    private bool Attack;
 
     void Start()
     {
         Moving = false;
+        Attack = false;
         Anime = GetComponent<Animator>();
     }
 
@@ -23,6 +25,15 @@ public class JaketTop : MonoBehaviour
         {
             Moving = false;
         }
+        if (Input.GetMouseButtonDown(0))
+        {
+            Attack = true;
+        }
+        else
+        {
+            Attack = false;
+        }
         Anime.SetBool("Moving", Moving);
+        Anime.SetBool("Attack", Attack);
     }
 }
