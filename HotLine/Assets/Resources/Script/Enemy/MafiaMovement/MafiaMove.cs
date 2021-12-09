@@ -13,9 +13,12 @@ public class MafiaMove : MonoBehaviour
     [Range(0,360)]public float Angle;
 
     private LayerMask TargetMask;
-    private LayerMask OnstacleMask;
+    [SerializeField]private LayerMask OnstacleMask;
+    [SerializeField]private Collider[] InTargets;
 
-    private int LineAngle = 0;
+    private Vector2 Direction;
+
+    private float LineAngle = 0;
 
     public struct ViewCastInfo
     {
@@ -35,29 +38,34 @@ public class MafiaMove : MonoBehaviour
 
     void Start()
     {
+        Direction = transform.right;
+
         Anime = GetComponent<Animator>();
 
+        OnstacleMask = LayerMask.GetMask("Player");
+
         Radius = 25.0f;
-        Angle = 95.0f;
+        Angle = 0.0f;
         LineAngle = 1;
     }
 
     void Update()
     {
-        Collider[] InTargets = Physics.OverlapSphere(transform.position, Radius, TargetMask);
-
-        for(int i = 0;i<InTargets.Length;++i)
+        
+        for (int i = 0; i < 24; ++i)
         {
-            Transform Target = InTargets[i].transform;
-
-            Vector3 TargetDirection = (Target.position - transform.position).normalized;
-
-            if(Vector3.Angle(transform.right,TargetDirection)<Angle / 2)
+            float Tangle;
+            if (i < 12)
             {
-                float TargetDistance = Vector3.Distance(transform.position, Target.position);
-
-                //if(!Physics.Raycast(transform.position,TargetDirection,TargetDistance,OnstacleMask))
-                //    Ta
+                Tangle = Angle + (LineAngle * i);
+                if (Physics2D.Raycast(transform.position, GetDistancee(), Radius, OnstacleMask))
+                    Debug.Log(GetDistancee());
+            }
+            else
+            {
+                Tangle = Angle - (LineAngle * i);
+                if (Physics2D.Raycast(transform.position, GetDistancee(), Radius, OnstacleMask))
+                    Debug.Log(GetDistancee());
             }
         }
 
@@ -65,40 +73,27 @@ public class MafiaMove : MonoBehaviour
         {
         }
 
-        Anime.SetBool("Dead", Dead);
+        //Anime.SetBool("Dead", Dead);
     }
 
-    
-
-    public Vector3 LocalViewAngle(float _Angle)
+    public Vector2 LocalViewAngle(float _Angle)
     {
         _Angle += transform.eulerAngles.y;
-        return new Vector3(Mathf.Sin(_Angle * Mathf.Deg2Rad), 0.0f, Mathf.Cos(_Angle * Mathf.Deg2Rad));
+        return new Vector2(Mathf.Sin(_Angle * Mathf.Deg2Rad), Mathf.Cos(_Angle * Mathf.Deg2Rad));
     }
 
-    public Vector3 DirectionAngle(float _Angle)
+    public Vector2 DirectionAngle(float _Angle)
     {
-        return new Vector3(Mathf.Sin(_Angle * Mathf.Deg2Rad), 0.0f, Mathf.Cos(_Angle * Mathf.Deg2Rad));
+        return new Vector2(Mathf.Sin(_Angle * Mathf.Deg2Rad), Mathf.Cos(_Angle * Mathf.Deg2Rad));
     }
 
-    public ViewCastInfo ViewCast(float _Angle)
+    private Vector2 GetDistancee()
     {
-        Vector3 Direction = DirectionAngle(_Angle);
+        Vector3 direction = transform.right;
 
-        RaycastHit Hit;
+        var quaternion = Quaternion.Euler(Angle, 0, 0);
+        Vector3 newDirection = quaternion * direction;
 
-        if (Physics.Raycast(transform.position, Direction, out Hit, Radius, OnstacleMask))
-        {
-            return new ViewCastInfo(true, Hit.point, Hit.distance, _Angle);
-        }
-
-        //Distance
-
-        return new ViewCastInfo
-            (
-            false,
-            transform.position + Direction * Radius,
-            Radius,
-            _Angle);
+        return newDirection; 
     }
 }

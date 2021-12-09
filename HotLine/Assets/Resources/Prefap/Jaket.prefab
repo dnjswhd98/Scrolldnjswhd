@@ -127,7 +127,6 @@ GameObject:
   - component: {fileID: 1959156149481716566}
   - component: {fileID: 1959156149481716567}
   - component: {fileID: 1959156149481716564}
-  - component: {fileID: 7676236232941399342}
   - component: {fileID: 4171541248307204626}
   m_Layer: 0
   m_Name: JaketTop
@@ -232,27 +231,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d366d2803d73dd4aa5db83d588b2f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!50 &7676236232941399342
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1959156149481716562}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 7
 --- !u!61 &4171541248307204626
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -291,7 +269,7 @@ GameObject:
   - component: {fileID: 1959156150187048391}
   - component: {fileID: 1959156150187048388}
   - component: {fileID: 7405165126951037668}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Jaket
   m_TagString: player
   m_Icon: {fileID: 0}

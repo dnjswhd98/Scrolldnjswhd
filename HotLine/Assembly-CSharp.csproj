@@ -53,6 +53,7 @@
     <UnityVersion>2020.3.23f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Resources\Script\PlayerCer.cs" />
     <Compile Include="Assets\Resources\Script\Enemy\MafiaMovement\MafiaMove.cs" />
     <Compile Include="Assets\Resources\Script\Singleton.cs" />
     <Compile Include="Assets\Resources\Script\GameManager.cs" />
@@ -60,7 +61,7 @@
     <Compile Include="Assets\Resources\Script\JaketMovement\JaketLegMove.cs" />
     <Compile Include="Assets\Resources\Script\JaketMovement\JaketTop.cs" />
     <Compile Include="Assets\Resources\Script\MouseCurser\MouseCurser.cs" />
-    <Compile Include="Assets\Resources\Script\PlayerCer.cs" />
+    <Compile Include="Assets\Resources\Script\Enemy\MafiaMovement\MafiaMoveEditer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
