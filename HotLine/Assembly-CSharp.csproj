@@ -60,6 +60,7 @@
     <Compile Include="Assets\Resources\Script\JaketMovement\JaketLegMove.cs" />
     <Compile Include="Assets\Resources\Script\JaketMovement\JaketTop.cs" />
     <Compile Include="Assets\Resources\Script\MouseCurser\MouseCurser.cs" />
+    <Compile Include="Assets\Resources\Script\PlayerCer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

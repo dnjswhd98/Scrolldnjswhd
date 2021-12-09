@@ -41,10 +41,9 @@ public class JaketTop : MonoBehaviour
         }
         else
         {
-            Attack = false;
         }
 
-        if(Input.GetMouseButtonDown(1) && WeaponNum > 0)
+        if (Input.GetMouseButtonDown(1) && WeaponNum > 0)
         {
             switch(WeaponNum)
             {
@@ -70,9 +69,22 @@ public class JaketTop : MonoBehaviour
 
     void SetAtkFlip()
     {
+        Attack = false;
+
         if (SRenderer.flipY)
             SRenderer.flipY = false;
         else
             SRenderer.flipY = true;
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (Attack)
+        {
+            if (collision.tag == "Enemy")
+            {
+                Debug.Log("Hit");
+            }
+        }
     }
 }

@@ -30,4 +30,6 @@ public class Singleton
         DOUBLEBARREL,
         UZI
     };
+
+    private bool PlayerFind = false;
 }

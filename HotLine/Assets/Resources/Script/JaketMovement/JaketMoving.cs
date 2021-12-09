@@ -25,9 +25,9 @@ public class JaketMoving : MonoBehaviour
         target = transform.position;
 
         Mouse = GameObject.Find("MouseCursor");
-        
-        if(Input.GetKey(KeyCode.W))
-            transform.Translate(new Vector3(0.0f, 0.1f, 0.0f),Space.World);        
+
+        if (Input.GetKey(KeyCode.W))
+            transform.Translate(new Vector3(0.0f, 0.1f, 0.0f), Space.World);
         if (Input.GetKey(KeyCode.S))
             transform.Translate(new Vector3(0.0f, -0.1f, 0.0f), Space.World);
         if (Input.GetKey(KeyCode.A))
@@ -39,5 +39,13 @@ public class JaketMoving : MonoBehaviour
         this.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
         Camera.main.transform.position = new Vector3(transform.position.x,transform.position.y, Camera.main.transform.position.z);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.transform.tag == "Walls")
+        {
+            Debug.Log("wall");
+        }
     }
 }

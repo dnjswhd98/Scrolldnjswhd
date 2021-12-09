@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: 22df08d05a96f974f99ded61d43afa63
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -2737991290725145295
+    second: sprEBackKicked_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -101,11 +104,32 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: sprEBackKicked_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 135e6367d63b00ad0800000000000000
+      internalID: -2737991290725145295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 86f138ffdfc82984da7b6f2e77b45380
     internalID: 0
     vertices: []
     indices: 
