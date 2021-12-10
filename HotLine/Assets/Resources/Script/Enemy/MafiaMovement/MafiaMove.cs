@@ -20,6 +20,10 @@ public class MafiaMove : MonoBehaviour
 
     private float LineAngle = 0;
 
+    GameObject Targeet;
+
+    Mesh ViewMesh;
+
     public struct ViewCastInfo
     {
         public bool Hit;
@@ -38,6 +42,10 @@ public class MafiaMove : MonoBehaviour
 
     void Start()
     {
+        Targeet = Resources.Load("Prefap/Jaket") as GameObject;
+        ViewMesh = new Mesh();
+        ViewMesh.name = "View Mesh";
+
         Direction = transform.right;
 
         Anime = GetComponent<Animator>();
@@ -45,40 +53,104 @@ public class MafiaMove : MonoBehaviour
         OnstacleMask = LayerMask.GetMask("Player");
 
         Radius = 25.0f;
-        Angle = 0.0f;
-        LineAngle = 1;
+        Angle = 95.0f;
+        LineAngle = 3;
     }
 
     void Update()
     {
-        
-        for (int i = 0; i < 24; ++i)
+
+        //for (int i = 0; i < 10; ++i)
+        //{
+        //    float Tangle;
+        //    if (i < 5)
+        //    {
+        //        Tangle = Angle + (LineAngle * i);
+        //        Angle = Tangle;
+        //        if (Physics2D.Raycast(transform.position, GetDistancee(), Radius, OnstacleMask))
+        //            Debug.Log(GetDistancee());
+        //    }
+        //    else
+        //    {
+        //        Tangle = -(Angle + (LineAngle * i));
+        //        Angle = Tangle;
+        //        if (Physics2D.Raycast(transform.position, GetDistancee(), Radius, OnstacleMask))
+        //            Debug.Log(GetDistancee());
+        //    }
+        //}
+
+        Collider[] InTargets = Physics.OverlapSphere(transform.position, Radius, TargetMask);
+       
+        for (int i = 0; i < InTargets.Length; ++i)
         {
-            float Tangle;
-            if (i < 12)
+            Transform Target = Targeet.transform;
+
+            Vector2 TargetDirection = (Target.position - transform.position).normalized;
+
+            if (Vector2.Angle(transform.right, TargetDirection) < Angle / 2)
             {
-                Tangle = Angle + (LineAngle * i);
-                if (Physics2D.Raycast(transform.position, GetDistancee(), Radius, OnstacleMask))
-                    Debug.Log(GetDistancee());
-            }
-            else
-            {
-                Tangle = Angle - (LineAngle * i);
-                if (Physics2D.Raycast(transform.position, GetDistancee(), Radius, OnstacleMask))
-                    Debug.Log(GetDistancee());
+                float TargetDistance = Vector2.Distance(transform.position, Target.position);
+
+                if (Physics.Raycast(transform.position, TargetDirection, TargetDistance, OnstacleMask))
+                    Debug.Log("find");
+
             }
         }
 
-        if(Dead)
+        if (Dead)
         {
         }
 
         //Anime.SetBool("Dead", Dead);
     }
 
+    private void LateUpdate()
+    {
+        int LineCount = Mathf.RoundToInt(Angle / LineAngle);
+
+        float AngleSize = Angle / LineCount;
+
+        List<Vector2> ViewPointList = new List<Vector2>();
+
+        for (int i = 0; i < LineCount - 1; ++i)
+        {
+            float ViewAngle = transform.eulerAngles.y - (Angle / 2) + AngleSize * i;
+
+            ViewCastInfo tViewCast = ViewCast(ViewAngle);
+
+            ViewPointList.Add(tViewCast.Point);
+        }
+
+
+        int VertexCount = ViewPointList.Count + 1;
+
+        Vector3[] VertexList = new Vector3[VertexCount];
+        VertexList[0] = Vector2.zero;
+
+        int[] Teiangle = new int[(VertexCount - 2) * 3];
+
+        for (int i = 0; i < VertexCount - 1; ++i)
+        {
+            VertexList[i + 1] = transform.InverseTransformPoint(ViewPointList[i]);
+
+            if (i < VertexCount - 2)
+            {
+                Teiangle[i * 3] = 0;
+                Teiangle[i * 3 + 1] = i + 1;
+                Teiangle[i * 3 + 2] = i + 2;
+            }
+        }
+
+        ViewMesh.Clear();
+        ViewMesh.vertices = VertexList;
+        ViewMesh.triangles = Teiangle;
+
+        ViewMesh.RecalculateNormals();
+    }
+
     public Vector2 LocalViewAngle(float _Angle)
     {
-        _Angle += transform.eulerAngles.y;
+        _Angle += transform.eulerAngles.z;
         return new Vector2(Mathf.Sin(_Angle * Mathf.Deg2Rad), Mathf.Cos(_Angle * Mathf.Deg2Rad));
     }
 
@@ -87,11 +159,32 @@ public class MafiaMove : MonoBehaviour
         return new Vector2(Mathf.Sin(_Angle * Mathf.Deg2Rad), Mathf.Cos(_Angle * Mathf.Deg2Rad));
     }
 
+    public ViewCastInfo ViewCast(float _Angle)
+    {
+        Vector3 Direction = DirectionAngle(_Angle);
+
+        RaycastHit Hit;
+
+        if (Physics.Raycast(transform.position, Direction, out Hit, Radius, OnstacleMask))
+        {
+            return new ViewCastInfo(true, Hit.point, Hit.distance, _Angle);
+        }
+
+        //Distance
+
+        return new ViewCastInfo
+            (
+            false,
+            transform.position + Direction * Radius,
+            Radius,
+            _Angle);
+    }
+
     private Vector2 GetDistancee()
     {
         Vector3 direction = transform.right;
 
-        var quaternion = Quaternion.Euler(Angle, 0, 0);
+        var quaternion = Quaternion.Euler(0, 0, Angle);
         Vector3 newDirection = quaternion * direction;
 
         return newDirection; 

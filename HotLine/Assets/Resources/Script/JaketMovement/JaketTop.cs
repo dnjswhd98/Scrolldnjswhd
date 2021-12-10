@@ -49,7 +49,8 @@ public class JaketTop : MonoBehaviour
             {
                 case 1:
                     GameObject obj = Resources.Load("Prefap/WeaponItem/Bat") as GameObject;
-                    obj.GetComponent<Rigidbody2D>().AddForce(Vector3.right * 1.0f);
+                    Instantiate(obj);
+                    //obj.GetComponent<Rigidbody2D>().AddForce(Vector3.right * 1.0f);
                     break;
                 case 2:
 
