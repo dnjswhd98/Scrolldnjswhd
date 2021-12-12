@@ -85,6 +85,7 @@ public class JaketTop : MonoBehaviour
             if (collision.tag == "Enemy")
             {
                 Debug.Log("Hit");
+                MafiaMoveTest.Dead = true;
             }
         }
     }

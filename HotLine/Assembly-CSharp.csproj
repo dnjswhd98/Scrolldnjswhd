@@ -55,13 +55,14 @@
   <ItemGroup>
     <Compile Include="Assets\Resources\Script\PlayerCer.cs" />
     <Compile Include="Assets\Resources\Script\Enemy\MafiaMovement\MafiaMoveEditer.cs" />
-    <Compile Include="Assets\Resources\Script\Enemy\MafiaMovement\MafiaMove.cs" />
+    <Compile Include="Assets\Resources\Script\Enemy\MafiaMovement\MafiaRay.cs" />
     <Compile Include="Assets\Resources\Script\Singleton.cs" />
     <Compile Include="Assets\Resources\Script\GameManager.cs" />
     <Compile Include="Assets\Resources\Script\JaketMovement\JaketMoving.cs" />
     <Compile Include="Assets\Resources\Script\JaketMovement\JaketLegMove.cs" />
     <Compile Include="Assets\Resources\Script\JaketMovement\JaketTop.cs" />
     <Compile Include="Assets\Resources\Script\MouseCurser\MouseCurser.cs" />
+    <Compile Include="Assets\Resources\Script\Enemy\MafiaMovement\MafiaMoveTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
