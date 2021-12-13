@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: db9ecaec7827c004f900e0b7e51b0355
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 2857856927108710371
+    second: sprBigBed_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -101,11 +104,32 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: sprBigBed_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 14
+        width: 60
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ef343fcbb529a720800000000000000
+      internalID: 2857856927108710371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 66bf25bf83336154cb24a2e2e6cb1d29
     internalID: 0
     vertices: []
     indices: 

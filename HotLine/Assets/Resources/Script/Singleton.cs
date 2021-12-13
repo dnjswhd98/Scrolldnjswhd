@@ -32,4 +32,14 @@ public class Singleton
     };
 
     private bool PlayerFind = false;
+
+    static public List<GameObject> EnemyList = new List<GameObject>();
+
+    public void SetEnemyList()
+    {
+        for(int i = 0; i <GameManager.ESpawnList.Count; ++i)
+        {
+            EnemyList.Add(GameObject.Find("Enemy" + i + "(Clone)"));
+        }
+    }
 }

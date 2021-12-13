@@ -1,7 +1,31 @@
 fileFormatVersion: 2
 guid: 557f540c77926d3468589264e28f83a6
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -2670298736904749157
+    second: sprEWalkM16_strip8_0
+  - first:
+      213: 8298805469605727195
+    second: sprEWalkM16_strip8_1
+  - first:
+      213: -8571995735334487896
+    second: sprEWalkM16_strip8_2
+  - first:
+      213: 8817718048862332598
+    second: sprEWalkM16_strip8_3
+  - first:
+      213: -2497419012013566648
+    second: sprEWalkM16_strip8_4
+  - first:
+      213: -6170913199250848831
+    second: sprEWalkM16_strip8_5
+  - first:
+      213: -4471656303519449717
+    second: sprEWalkM16_strip8_6
+  - first:
+      213: -4985703209232683071
+    second: sprEWalkM16_strip8_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -101,11 +125,179 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: sprEWalkM16_strip8_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 3
+        width: 29
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9f3e96527131fad0800000000000000
+      internalID: -2670298736904749157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprEWalkM16_strip8_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 3
+        width: 29
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdb0beb0b974b2370800000000000000
+      internalID: 8298805469605727195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprEWalkM16_strip8_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 3
+        width: 28
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a8793b8b472a0980800000000000000
+      internalID: -8571995735334487896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprEWalkM16_strip8_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 3
+        width: 29
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b66dffd8d3de5a70800000000000000
+      internalID: 8817718048862332598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprEWalkM16_strip8_4
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 3
+        width: 29
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 845df95f3a2675dd0800000000000000
+      internalID: -2497419012013566648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprEWalkM16_strip8_5
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 3
+        width: 29
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c342e2e3238c5aa0800000000000000
+      internalID: -6170913199250848831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprEWalkM16_strip8_6
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 3
+        width: 30
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8d3617a84c71f1c0800000000000000
+      internalID: -4471656303519449717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprEWalkM16_strip8_7
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 3
+        width: 29
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cf292ab8593fcab0800000000000000
+      internalID: -4985703209232683071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 350d6bc1a620a5e48885106a379156b6
     internalID: 0
     vertices: []
     indices: 

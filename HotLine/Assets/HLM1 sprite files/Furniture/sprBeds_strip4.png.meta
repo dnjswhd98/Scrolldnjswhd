@@ -1,7 +1,19 @@
 fileFormatVersion: 2
 guid: 6847507f5b1167b4c89042128fe96a94
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -299891789467175344
+    second: sprBeds_strip4_0
+  - first:
+      213: 2123352279430929014
+    second: sprBeds_strip4_1
+  - first:
+      213: -1815503386833754793
+    second: sprBeds_strip4_2
+  - first:
+      213: -3387275304439016786
+    second: sprBeds_strip4_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -101,11 +113,95 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: sprBeds_strip4_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5
+        width: 50
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 056b0c1a10296dbf0800000000000000
+      internalID: -299891789467175344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprBeds_strip4_1
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 5
+        width: 50
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67a1f7ce5a9a77d10800000000000000
+      internalID: 2123352279430929014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprBeds_strip4_2
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 5
+        width: 50
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7556143e9490ec6e0800000000000000
+      internalID: -1815503386833754793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprBeds_strip4_3
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 5
+        width: 50
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea29572ae0bfdf0d0800000000000000
+      internalID: -3387275304439016786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b9f0a87d559cc23449db8bfcbc9de2c8
     internalID: 0
     vertices: []
     indices: 

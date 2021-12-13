@@ -1,7 +1,13 @@
 fileFormatVersion: 2
 guid: 9f7e336e78db29742ba800a945f3465d
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -6074156752293546761
+    second: sprEAttackM16_strip2_0
+  - first:
+      213: 8824442348304380673
+    second: sprEAttackM16_strip2_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -101,11 +107,53 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: sprEAttackM16_strip2_0
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 21
+        width: 29
+        height: 17
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f4b085bd9244bba0800000000000000
+      internalID: -6074156752293546761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprEAttackM16_strip2_1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 21
+        width: 36
+        height: 16
+      alignment: 9
+      pivot: {x: 0.41666666, y: 0.5625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 103b897df87b67a70800000000000000
+      internalID: 8824442348304380673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 9f80a51e4d7c8c04ba081ca4d1cfff6c
     internalID: 0
     vertices: []
     indices: 

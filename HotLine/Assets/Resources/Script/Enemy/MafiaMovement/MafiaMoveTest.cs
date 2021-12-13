@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class MafiaMoveTest : MonoBehaviour
 {
-    static public bool Dead;
+    private bool Dead;
+    public bool Hit;
+    private Vector3 Direction;
     private Animator Anime;
     private Rigidbody2D Rigid;
+    private GameObject Player;
 
     void Start()
     {
@@ -17,8 +20,19 @@ public class MafiaMoveTest : MonoBehaviour
 
     void Update()
     {
-        
+        Player = GameObject.Find("Jaket(Clone)");
+        Direction = (transform.position - Player.transform.position).normalized;
+        if(Hit)
+        {
+            Rigid.AddForce(Direction * 1000);
+            Dead = true;
+        }
 
+        if (Dead)
+        {
+            Hit = false;
+            //GetComponent<CapsuleCollider2D>().isTrigger = true;
+        }
         Anime.SetBool("Dead", Dead);
     }
 }

@@ -1,7 +1,16 @@
 fileFormatVersion: 2
 guid: f5cbde4416204a947947bc59ee69e641
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 3956440863375655042
+    second: sprJacuzzi_strip3_0
+  - first:
+      213: -1519717904220908414
+    second: sprJacuzzi_strip3_1
+  - first:
+      213: -4143045801381466451
+    second: sprJacuzzi_strip3_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -101,11 +110,74 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: sprJacuzzi_strip3_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 79
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 280885cc00a18e630800000000000000
+      internalID: 3956440863375655042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprJacuzzi_strip3_1
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 0
+        width: 79
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2849c103e90e8eae0800000000000000
+      internalID: -1519717904220908414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprJacuzzi_strip3_2
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 0
+        width: 79
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daeeb706bc1f086c0800000000000000
+      internalID: -4143045801381466451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 44be07c495674d74890589f095bc720e
     internalID: 0
     vertices: []
     indices: 

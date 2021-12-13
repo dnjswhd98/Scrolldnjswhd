@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-[CustomEditor(typeof(MafiaMove))]
+[CustomEditor(typeof(MafiaRay))]
 public class MafiaMoveEditer : Editor
 {
     private void OnSceneGUI()
     {
-        MafiaMove va = (MafiaMove)target;
+        MafiaRay va = (MafiaRay)target;
 
         //촤측 시야각 최대치
         Vector3 LeftViewAngle = va.LocalViewAngle(-va.Angle / 2.0f);

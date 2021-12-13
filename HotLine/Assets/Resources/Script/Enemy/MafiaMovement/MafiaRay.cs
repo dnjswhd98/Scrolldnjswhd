@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MafiaMove : MonoBehaviour
+public class MafiaRay : MonoBehaviour
 {
     private bool Walking;
     private bool FindPlayer;

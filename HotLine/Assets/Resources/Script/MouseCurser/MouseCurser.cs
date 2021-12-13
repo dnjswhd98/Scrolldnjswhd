@@ -6,11 +6,6 @@ public class MouseCurser : MonoBehaviour
 {
     Vector2 MousePos;
 
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
         MousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);

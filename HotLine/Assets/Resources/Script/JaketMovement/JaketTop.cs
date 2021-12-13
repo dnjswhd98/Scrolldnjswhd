@@ -9,6 +9,7 @@ public class JaketTop : MonoBehaviour
     private bool Attack;
     private int WeaponNum;
     private SpriteRenderer SRenderer;
+    private GameObject Mouse;
     
     void Start()
     {
@@ -17,6 +18,7 @@ public class JaketTop : MonoBehaviour
         Anime = GetComponent<Animator>();
         WeaponNum = 1;
         SRenderer = GetComponent<SpriteRenderer>();
+        Mouse = GameObject.Find("MouseCurser");
         GameObject obj = Resources.Load("Prefap/WeaponItem/Bat") as GameObject;
     }
 
@@ -49,8 +51,9 @@ public class JaketTop : MonoBehaviour
             {
                 case 1:
                     GameObject obj = Resources.Load("Prefap/WeaponItem/Bat") as GameObject;
+                    obj.transform.position = transform.position;
                     Instantiate(obj);
-                    //obj.GetComponent<Rigidbody2D>().AddForce(Vector3.right * 1.0f);
+                    //obj.GetComponent<Rigidbody2D>().AddForce((transform.position - Mouse.transform.position).normalized * 10.0f);
                     break;
                 case 2:
 
@@ -84,8 +87,9 @@ public class JaketTop : MonoBehaviour
         {
             if (collision.tag == "Enemy")
             {
-                Debug.Log("Hit");
-                MafiaMoveTest.Dead = true;
+                Debug.Log(Singleton.EnemyList.Count);
+                collision.GetComponent<MafiaMoveTest>().Hit = true;
+                //MafiaMoveTest.Hit = true;
             }
         }
     }
