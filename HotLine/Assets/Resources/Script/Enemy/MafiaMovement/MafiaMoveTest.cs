@@ -15,6 +15,7 @@ public class MafiaMoveTest : MonoBehaviour
     {
         Anime = GetComponent<Animator>();
         Rigid = transform.parent.GetComponent<Rigidbody2D>();
+        Hit = false;
         Dead = false;
     }
 

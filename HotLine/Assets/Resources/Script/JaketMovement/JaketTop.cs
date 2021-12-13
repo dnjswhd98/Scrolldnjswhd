@@ -88,7 +88,13 @@ public class JaketTop : MonoBehaviour
             if (collision.tag == "Enemy")
             {
                 Debug.Log(Singleton.EnemyList.Count);
-                collision.GetComponent<MafiaMoveTest>().Hit = true;
+                for (int i = 0; i < Singleton.EnemyList.Count; ++i)
+                {
+                    //string objName = "Enemy" + i + "(Clone)";
+                    if (collision.name == Singleton.EnemyList[i].name)
+                        Singleton.EnemyList[i].GetComponent<MafiaMoveTest>().Hit = true;
+                        //GameObject.Find(objName).GetComponent<MafiaMoveTest>().Hit = true;
+                }
                 //MafiaMoveTest.Hit = true;
             }
         }
