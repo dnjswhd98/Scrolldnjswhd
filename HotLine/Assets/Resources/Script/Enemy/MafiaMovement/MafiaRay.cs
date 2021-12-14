@@ -49,7 +49,7 @@ public class MafiaRay : MonoBehaviour
         OnstacleMask = LayerMask.GetMask("Wall");
         TargetMask = LayerMask.GetMask("Player");
 
-        Radius = 5.0f;
+        Radius = 10.0f;
         Angle = 95.0f;
         LineAngle = 3;
     }
@@ -57,38 +57,18 @@ public class MafiaRay : MonoBehaviour
     void Update()
     {
 
-        //for (int i = 0; i < 10; ++i)
-        //{
-        //    float Tangle;
-        //    if (i < 5)
-        //    {
-        //        Tangle = Angle + (LineAngle * i);
-        //        Angle = Tangle;
-        //        if (Physics2D.Raycast(transform.position, GetDistancee(), Radius, OnstacleMask))
-        //            Debug.Log(GetDistancee());
-        //    }
-        //    else
-        //    {
-        //        Tangle = -(Angle + (LineAngle * i));
-        //        Angle = Tangle;
-        //        if (Physics2D.Raycast(transform.position, GetDistancee(), Radius, OnstacleMask))
-        //            Debug.Log(GetDistancee());
-        //    }
-        //}
-
         InTargets = Physics2D.OverlapCircle(transform.position, Radius, TargetMask);
        
-
        Transform Target = Targeet.transform;
     
        Vector2 TargetDirection = (Target.position - transform.position).normalized;
     
-       if (Vector2.Angle(transform.up, TargetDirection) < Angle / 2)
+       if (Vector2.Angle(transform.right, TargetDirection) < Angle / 2)
        {
            float TargetDistance = Vector2.Distance(transform.position, Target.position);
     
            if (!Physics.Raycast(transform.position, TargetDirection, TargetDistance, OnstacleMask))
-               Debug.Log("find");
+               Debug.Log(transform.name + "find");
     
        }
     }
@@ -103,18 +83,17 @@ public class MafiaRay : MonoBehaviour
 
         for (int i = 0; i < LineCount - 1; ++i)
         {
-            float ViewAngle = transform.eulerAngles.y - (Angle / 2) + AngleSize * i;
+            float ViewAngle = transform.eulerAngles.z - (Angle / 2) + AngleSize * i;
 
             ViewCastInfo tViewCast = ViewCast(ViewAngle);
 
             ViewPointList.Add(tViewCast.Point);
         }
 
-
         int VertexCount = ViewPointList.Count + 1;
 
         Vector3[] VertexList = new Vector3[VertexCount];
-        VertexList[0] = Vector2.zero;
+        VertexList[0] = Vector3.zero;
 
         int[] Teiangle = new int[(VertexCount - 2) * 3];
 
