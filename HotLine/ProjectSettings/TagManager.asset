@@ -9,6 +9,7 @@ TagManager:
   - player
   - EnemySpawnPos
   - Item
+  - Dog
   layers:
   - Default
   - TransparentFX

@@ -42,4 +42,9 @@ public class Singleton
             EnemyList.Add(GameObject.Find("Enemy" + i + "(Clone)"));
         }
     }
+
+    public void SetEnemyHit(GameObject _obj, bool _hit)
+    {
+        //_obj.GetComponent<MafiaMoveTest>().Hit = _hit;
+    }
 }

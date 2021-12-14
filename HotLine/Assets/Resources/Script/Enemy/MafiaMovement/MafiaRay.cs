@@ -6,15 +6,13 @@ public class MafiaRay : MonoBehaviour
 {
     private bool Walking;
     private bool FindPlayer;
-    public bool Dead;
-    private Animator Anime;
 
     public float Radius;
     [Range(0,360)]public float Angle;
 
     private LayerMask TargetMask;
     [SerializeField]private LayerMask OnstacleMask;
-    [SerializeField]private Collider[] InTargets;
+    [SerializeField]private Collider2D InTargets;
 
     private Vector2 Direction;
 
@@ -48,11 +46,10 @@ public class MafiaRay : MonoBehaviour
 
         Direction = transform.right;
 
-        Anime = GetComponent<Animator>();
+        OnstacleMask = LayerMask.GetMask("Wall");
+        TargetMask = LayerMask.GetMask("Player");
 
-        OnstacleMask = LayerMask.GetMask("Player");
-
-        Radius = 25.0f;
+        Radius = 5.0f;
         Angle = 95.0f;
         LineAngle = 3;
     }
@@ -79,29 +76,21 @@ public class MafiaRay : MonoBehaviour
         //    }
         //}
 
-        Collider[] InTargets = Physics.OverlapSphere(transform.position, Radius, TargetMask);
+        InTargets = Physics2D.OverlapCircle(transform.position, Radius, TargetMask);
        
-        for (int i = 0; i < InTargets.Length; ++i)
-        {
-            Transform Target = Targeet.transform;
 
-            Vector2 TargetDirection = (Target.position - transform.position).normalized;
-
-            if (Vector2.Angle(transform.right, TargetDirection) < Angle / 2)
-            {
-                float TargetDistance = Vector2.Distance(transform.position, Target.position);
-
-                if (Physics.Raycast(transform.position, TargetDirection, TargetDistance, OnstacleMask))
-                    Debug.Log("find");
-
-            }
-        }
-
-        if (Dead)
-        {
-        }
-
-        //Anime.SetBool("Dead", Dead);
+       Transform Target = Targeet.transform;
+    
+       Vector2 TargetDirection = (Target.position - transform.position).normalized;
+    
+       if (Vector2.Angle(transform.up, TargetDirection) < Angle / 2)
+       {
+           float TargetDistance = Vector2.Distance(transform.position, Target.position);
+    
+           if (!Physics.Raycast(transform.position, TargetDirection, TargetDistance, OnstacleMask))
+               Debug.Log("find");
+    
+       }
     }
 
     private void LateUpdate()
@@ -165,7 +154,7 @@ public class MafiaRay : MonoBehaviour
 
         RaycastHit Hit;
 
-        if (Physics.Raycast(transform.position, Direction, out Hit, Radius, OnstacleMask))
+        if (Physics.Raycast(transform.position, Direction, out Hit, Radius, TargetMask))
         {
             return new ViewCastInfo(true, Hit.point, Hit.distance, _Angle);
         }

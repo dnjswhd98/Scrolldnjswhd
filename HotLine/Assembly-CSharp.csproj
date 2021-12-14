@@ -54,7 +54,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Resources\Script\PlayerCer.cs" />
-    <Compile Include="Assets\Resources\Script\Enemy\MafiaMovement\MafiaMoveEditer.cs" />
+    <Compile Include="Assets\Resources\Script\Enemy\MafiaMovement\MafiaRayEditer.cs" />
     <Compile Include="Assets\Resources\Script\Enemy\MafiaMovement\MafiaRay.cs" />
     <Compile Include="Assets\Resources\Script\Singleton.cs" />
     <Compile Include="Assets\Resources\Script\GameManager.cs" />
@@ -63,6 +63,10 @@
     <Compile Include="Assets\Resources\Script\JaketMovement\JaketTop.cs" />
     <Compile Include="Assets\Resources\Script\MouseCurser\MouseCurser.cs" />
     <Compile Include="Assets\Resources\Script\Enemy\MafiaMovement\MafiaMoveTest.cs" />
+    <Compile Include="Assets\Resources\Script\Enemy\DogMove.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Resources\Font\justice\justice.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

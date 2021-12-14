@@ -6,20 +6,29 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private GameObject PlayerPrefab;
     [SerializeField] private GameObject EnemyPrefab;
+    [SerializeField] private GameObject DogPrefab;
     static public List<GameObject> ESpawnList;
+    static public List<GameObject> DSpawnList;
     [SerializeField] private List<GameObject> Elist;
 
     private void Awake()
     {
         PlayerPrefab = Resources.Load("Prefap/Jaket") as GameObject;
         EnemyPrefab = Resources.Load("Prefap/EnemyMafiaBat") as GameObject;
+        DogPrefab = Resources.Load("Prefap/Dog") as GameObject;
     }
 
     private void Start()
     {
         ESpawnList = new List<GameObject>();
+        DSpawnList = new List<GameObject>();
+
         for (int i = 0; i < 7; ++i)
             ESpawnList.Add(GameObject.Find("EnemySpawn" + i));
+
+        for (int i = 0; i < 2; ++i)
+            DSpawnList.Add(GameObject.Find("DogSpawn" + i));
+        
         SpawnObject();
         Elist = Singleton.EnemyList;
     }
@@ -33,8 +42,17 @@ public class GameManager : MonoBehaviour
         {
             EnemyPrefab.transform.position = GameObject.Find("EnemySpawn" + i).transform.position;
             EnemyPrefab.name = ("Enemy" + i);
+            //EnemyPrefab.transform.Find("MafiaTop").GetComponent<MafiaMoveTest>().SetWeaponNum(7);
             Instantiate(EnemyPrefab);
         }
+
+        for (int i = 0; i < DSpawnList.Count; ++i)
+        {
+            DogPrefab.transform.position = GameObject.Find("DogSpawn" + i).transform.position;
+            DogPrefab.name = ("Dog" + i);
+            Instantiate(DogPrefab);
+        }
+
         Singleton.GetInstance.SetEnemyList();
     }
 }

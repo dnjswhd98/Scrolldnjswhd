@@ -75,10 +75,10 @@ public class JaketTop : MonoBehaviour
     {
         Attack = false;
 
-        if (SRenderer.flipY)
-            SRenderer.flipY = false;
-        else
-            SRenderer.flipY = true;
+        //if (SRenderer.flipY)
+        //    SRenderer.flipY = false;
+        //else
+        //    SRenderer.flipY = true;
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -86,17 +86,9 @@ public class JaketTop : MonoBehaviour
         if (Attack)
         {
             if (collision.tag == "Enemy")
-            {
-                Debug.Log(Singleton.EnemyList.Count);
-                for (int i = 0; i < Singleton.EnemyList.Count; ++i)
-                {
-                    //string objName = "Enemy" + i + "(Clone)";
-                    if (collision.name == Singleton.EnemyList[i].name)
-                        Singleton.EnemyList[i].GetComponent<MafiaMoveTest>().Hit = true;
-                        //GameObject.Find(objName).GetComponent<MafiaMoveTest>().Hit = true;
-                }
-                //MafiaMoveTest.Hit = true;
-            }
+                collision.transform.Find("MafiaTop").GetComponent<MafiaMoveTest>().Hit = true;
+            if (collision.tag == "Dog")
+                collision.GetComponent<DogMove>().Hit = true;
         }
     }
 }

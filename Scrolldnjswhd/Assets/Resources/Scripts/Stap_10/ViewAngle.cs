@@ -40,6 +40,8 @@ public class ViewAngle : MonoBehaviour
     Mesh ViewMesh;
     public MeshFilter ViewMeshFilter;
 
+    [SerializeField] private Collider[] InTargets;
+
     private void Start()
     {
         ViewMesh = new Mesh();
@@ -56,7 +58,7 @@ public class ViewAngle : MonoBehaviour
         TargetList.Clear();
 
         //OverlapSphere(Vector3 position, float radius, int layerMask);
-        Collider[] InTargets = Physics.OverlapSphere(transform.position, Radius, TargetMask);
+        InTargets = Physics.OverlapSphere(transform.position, Radius, TargetMask);
 
         for (int i = 0; i < InTargets.Length; ++i)
         {

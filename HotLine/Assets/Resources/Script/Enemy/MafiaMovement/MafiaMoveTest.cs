@@ -6,6 +6,7 @@ public class MafiaMoveTest : MonoBehaviour
 {
     private bool Dead;
     public bool Hit;
+    private int WeaponNum;
     private Vector3 Direction;
     private Animator Anime;
     private Rigidbody2D Rigid;
@@ -32,8 +33,10 @@ public class MafiaMoveTest : MonoBehaviour
         if (Dead)
         {
             Hit = false;
-            //GetComponent<CapsuleCollider2D>().isTrigger = true;
+            transform.parent.GetComponent<CapsuleCollider2D>().isTrigger = true;
         }
         Anime.SetBool("Dead", Dead);
     }
+
+    public void SetWeaponNum(int _Wnum) { WeaponNum = _Wnum; }
 }
