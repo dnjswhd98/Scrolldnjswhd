@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Inspector
+  m_Title: Scene
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_MinSize: {x: 681, y: 492}
   m_MaxSize: {x: 16006, y: 14042}
   vertical: 1
-  controlID: 77
+  controlID: 79
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_MinSize: {x: 681, y: 492}
   m_MaxSize: {x: 16006, y: 14042}
   vertical: 0
-  controlID: 78
+  controlID: 80
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_MinSize: {x: 405, y: 492}
   m_MaxSize: {x: 12005, y: 14042}
   vertical: 1
-  controlID: 79
+  controlID: 81
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -197,7 +197,7 @@ MonoBehaviour:
   m_MinSize: {x: 405, y: 221}
   m_MaxSize: {x: 12005, y: 4021}
   vertical: 0
-  controlID: 80
+  controlID: 82
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -329,7 +329,7 @@ MonoBehaviour:
   m_MinSize: {x: 276, y: 312}
   m_MaxSize: {x: 4001, y: 8042}
   vertical: 1
-  controlID: 68
+  controlID: 50
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -501,7 +501,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: d63d0000
       m_LastClickedID: 15830
-      m_ExpandedIDs: 54fbffff
+      m_ExpandedIDs: 54fbffffd63d0000283e0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -561,9 +561,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 10.250145, y: -9.388466, z: 3.9363842}
+    m_Target: {x: 4.56726, y: -5.8329506, z: 21.786232}
     speed: 2
-    m_Value: {x: 10.250145, y: -9.388466, z: 3.9363842}
+    m_Value: {x: 4.56726, y: -5.8329506, z: 21.786232}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -614,9 +614,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0.3215077, y: -0.4759783, z: 0.19230708, w: -0.79567295}
   m_Size:
-    m_Target: 29.771399
+    m_Target: 12.412617
     speed: 2
-    m_Value: 29.771399
+    m_Value: 12.412617
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -790,21 +790,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources/Scripts/Stap_10
+    - Assets/Resources/Materials/Stap_10
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Resources/Scripts/Stap_10
+  - Assets/Resources/Materials/Stap_10
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\SGA\Documents\GitHub\Scrolldnjswhd\Scrolldnjswhd
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 139}
-    m_SelectedIDs: b03e0000
-    m_LastClickedID: 16048
+    scrollPos: {x: 0, y: 126}
+    m_SelectedIDs: aa3e0000
+    m_LastClickedID: 16042
     m_ExpandedIDs: 000000008e3e0000903e0000923e0000943e0000963e0000983e00009a3e00009c3e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -957,7 +957,7 @@ MonoBehaviour:
     m_CachedPref: 0
     m_ControlHash: 0
     m_PrefName: 
-  m_LastInspectedObjectInstanceID: -1
+  m_LastInspectedObjectInstanceID: -2232
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_LockTracker:

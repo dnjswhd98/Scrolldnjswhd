@@ -34,6 +34,8 @@ public class MafiaMoveTest : MonoBehaviour
         {
             Hit = false;
             transform.parent.GetComponent<CapsuleCollider2D>().isTrigger = true;
+            transform.parent.GetComponent<MafiaMovement>().enabled = false;
+            transform.parent.GetComponent<MafiaRay>().enabled = false;
         }
         Anime.SetBool("Dead", Dead);
     }

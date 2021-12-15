@@ -13,7 +13,7 @@ public class JaketMoving : MonoBehaviour
     private float CameraY;
 
     float angle;
-    Vector2 target, mouse;
+    Vector2 target;
 
     void Start()
     {

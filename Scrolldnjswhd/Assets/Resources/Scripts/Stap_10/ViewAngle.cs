@@ -60,20 +60,23 @@ public class ViewAngle : MonoBehaviour
         //OverlapSphere(Vector3 position, float radius, int layerMask);
         InTargets = Physics.OverlapSphere(transform.position, Radius, TargetMask);
 
-        for (int i = 0; i < InTargets.Length; ++i)
+        if (InTargets != null)
         {
-            Transform Target = InTargets[i].transform;
-
-            Vector3 TargetDirection = (Target.position - transform.position).normalized;
-
-            if (Vector3.Angle(transform.forward, TargetDirection) < Angle / 2)
+            for (int i = 0; i < InTargets.Length; ++i)
             {
-                float TargetDistance = Vector3.Distance(transform.position, Target.position);
+                Transform Target = InTargets[i].transform;
 
-                if (!Physics.Raycast(transform.position, TargetDirection, TargetDistance, OnstacleMask))
-                    TargetList.Add(Target);
+                Vector3 TargetDirection = (Target.position - transform.position).normalized;
 
-                
+                if (Vector3.Angle(transform.forward, TargetDirection) < Angle / 2)
+                {
+                    float TargetDistance = Vector3.Distance(transform.position, Target.position);
+
+                    if (!Physics.Raycast(transform.position, TargetDirection, TargetDistance, OnstacleMask))
+                        TargetList.Add(Target);
+
+
+                }
             }
         }
     }
