@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
         ESpawnList = new List<GameObject>();
         DSpawnList = new List<GameObject>();
 
-        for (int i = 0; i < 7; ++i)
+        for (int i = 0; i < 9; ++i)
             ESpawnList.Add(GameObject.Find("EnemySpawn" + i));
 
         for (int i = 0; i < 2; ++i)
@@ -42,6 +42,17 @@ public class GameManager : MonoBehaviour
         {
             EnemyPrefab.transform.position = GameObject.Find("EnemySpawn" + i).transform.position;
             EnemyPrefab.name = ("Enemy" + i);
+            if (i < 2)
+                EnemyPrefab.transform.Find("MafiaTop").GetComponent<MafiaMoveTest>().WeaponNum = 1;
+            else if (i >= 2 && i < 4)
+                EnemyPrefab.transform.Find("MafiaTop").GetComponent<MafiaMoveTest>().WeaponNum = 2;
+            else if (i == 4)
+                EnemyPrefab.transform.Find("MafiaTop").GetComponent<MafiaMoveTest>().WeaponNum = 3;
+            else if (i >= 5 && i < 7)
+                EnemyPrefab.transform.Find("MafiaTop").GetComponent<MafiaMoveTest>().WeaponNum = 7;
+            else
+                EnemyPrefab.transform.Find("MafiaTop").GetComponent<MafiaMoveTest>().WeaponNum = 9;
+
             //EnemyPrefab.transform.Find("MafiaTop").GetComponent<MafiaMoveTest>().SetWeaponNum(7);
             Instantiate(EnemyPrefab);
         }

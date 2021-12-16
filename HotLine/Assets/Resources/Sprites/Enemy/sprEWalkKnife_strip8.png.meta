@@ -1,7 +1,31 @@
 fileFormatVersion: 2
 guid: 3173e01967b395b44940602afeeeaa83
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 5283649222360549869
+    second: sprEWalkKnife_strip8_0
+  - first:
+      213: -3881650622604395950
+    second: sprEWalkKnife_strip8_1
+  - first:
+      213: 631952928234563834
+    second: sprEWalkKnife_strip8_2
+  - first:
+      213: 8465227737244831975
+    second: sprEWalkKnife_strip8_3
+  - first:
+      213: 3110509592972952205
+    second: sprEWalkKnife_strip8_4
+  - first:
+      213: -4309970762967327592
+    second: sprEWalkKnife_strip8_5
+  - first:
+      213: -7179006106555743336
+    second: sprEWalkKnife_strip8_6
+  - first:
+      213: 5602009852440165801
+    second: sprEWalkKnife_strip8_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -101,11 +125,179 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: sprEWalkKnife_strip8_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 3
+        width: 22
+        height: 24
+      alignment: 9
+      pivot: {x: 0.36363637, y: 0.5416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de9c19849fa435940800000000000000
+      internalID: 5283649222360549869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprEWalkKnife_strip8_1
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 3
+        width: 22
+        height: 24
+      alignment: 9
+      pivot: {x: 0.36363637, y: 0.5416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25abd79135b912ac0800000000000000
+      internalID: -3881650622604395950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprEWalkKnife_strip8_2
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 3
+        width: 23
+        height: 24
+      alignment: 9
+      pivot: {x: 0.3478261, y: 0.5416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af8603a07d525c800800000000000000
+      internalID: 631952928234563834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprEWalkKnife_strip8_3
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 3
+        width: 22
+        height: 24
+      alignment: 9
+      pivot: {x: 0.36363637, y: 0.5416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e0134db6c78a7570800000000000000
+      internalID: 8465227737244831975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprEWalkKnife_strip8_4
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 3
+        width: 22
+        height: 24
+      alignment: 9
+      pivot: {x: 0.36363637, y: 0.5416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d82099f9effba2b20800000000000000
+      internalID: 3110509592972952205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprEWalkKnife_strip8_5
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 3
+        width: 22
+        height: 24
+      alignment: 9
+      pivot: {x: 0.40909094, y: 0.5416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89c53012d68ef24c0800000000000000
+      internalID: -4309970762967327592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprEWalkKnife_strip8_6
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 3
+        width: 22
+        height: 24
+      alignment: 9
+      pivot: {x: 0.45454547, y: 0.5416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 893826a6bfb0f5c90800000000000000
+      internalID: -7179006106555743336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprEWalkKnife_strip8_7
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 3
+        width: 22
+        height: 24
+      alignment: 9
+      pivot: {x: 0.40909094, y: 0.5416667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ad3fe2b7465ebd40800000000000000
+      internalID: 5602009852440165801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d17582bbdb015b349ba756d26c936614
     internalID: 0
     vertices: []
     indices: 

@@ -6,7 +6,9 @@ public class MafiaMoveTest : MonoBehaviour
 {
     private bool Dead;
     public bool Hit;
-    private int WeaponNum;
+    public bool FindPlayer;
+    [SerializeField]private bool Attack;
+    [SerializeField]public int WeaponNum;
     private Vector3 Direction;
     private Animator Anime;
     private Rigidbody2D Rigid;
@@ -18,6 +20,7 @@ public class MafiaMoveTest : MonoBehaviour
         Rigid = transform.parent.GetComponent<Rigidbody2D>();
         Hit = false;
         Dead = false;
+        Attack = false;
     }
 
     void Update()
@@ -36,9 +39,24 @@ public class MafiaMoveTest : MonoBehaviour
             transform.parent.GetComponent<CapsuleCollider2D>().isTrigger = true;
             transform.parent.GetComponent<MafiaMovement>().enabled = false;
             transform.parent.GetComponent<MafiaRay>().enabled = false;
+            transform.parent.GetComponent<CapsuleCollider2D>().enabled = false;
         }
+
+        if (FindPlayer && WeaponNum >= 7)
+        {
+            Attack = true;
+        }
+
         Anime.SetBool("Dead", Dead);
+        Anime.SetBool("Attack", Attack);
+        Anime.SetInteger("WeaponNum", WeaponNum);
     }
 
-    public void SetWeaponNum(int _Wnum) { WeaponNum = _Wnum; }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if(FindPlayer && WeaponNum < 7)
+        {
+            Attack = true;
+        }
+    }
 }

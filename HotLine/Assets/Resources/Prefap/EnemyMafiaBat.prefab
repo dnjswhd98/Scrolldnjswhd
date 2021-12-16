@@ -114,6 +114,7 @@ GameObject:
   - component: {fileID: 7018851847333759876}
   - component: {fileID: 5400925728973103427}
   - component: {fileID: 5286639064886538320}
+  - component: {fileID: 3094011440026354576}
   m_Layer: 0
   m_Name: MafiaTop
   m_TagString: Untagged
@@ -218,6 +219,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Hit: 0
+  FindPlayer: 0
+  Attack: 0
+  WeaponNum: 9
+--- !u!61 &3094011440026354576
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6264799450058489535}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.2, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.75000006}
+    oldSize: {x: 0.16, y: 0.28}
+    newSize: {x: 0.16, y: 0.28}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.25, y: 0.24}
+  m_EdgeRadius: 0
 --- !u!1 &8877480230871758360
 GameObject:
   m_ObjectHideFlags: 0
@@ -246,7 +276,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8877480230871758360}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.57, y: -13.83, z: 0}
+  m_LocalPosition: {x: 15.35, y: 6.67, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 672978751021303533}

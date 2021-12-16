@@ -42,6 +42,7 @@ public class MafiaRay : MonoBehaviour
                 {
                     Debug.Log(transform.name + "find");
                     this.gameObject.GetComponent<MafiaMovement>().FindPlayer = true;
+                    this.transform.Find("MafiaTop").GetComponent<MafiaMoveTest>().FindPlayer = true;
                 }
             }
         }

@@ -1,7 +1,25 @@
 fileFormatVersion: 2
 guid: d731a9439a05c7747860e2b808cd87d9
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -3613212780498587984
+    second: sprEGetUp_strip7_1
+  - first:
+      213: 6229625367678350451
+    second: sprEGetUp_strip7_2
+  - first:
+      213: -7081071870423362143
+    second: sprEGetUp_strip7_3
+  - first:
+      213: 8631911006659400015
+    second: sprEGetUp_strip7_4
+  - first:
+      213: -5430846128817054517
+    second: sprEGetUp_strip7_5
+  - first:
+      213: -7626073450857128908
+    second: sprEGetUp_strip7_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -101,11 +119,137 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: sprEGetUp_strip7_1
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 3
+        width: 51
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0beea78ae1a4bddc0800000000000000
+      internalID: -3613212780498587984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprEGetUp_strip7_2
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 0
+        width: 43
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 374fa341443147650800000000000000
+      internalID: 6229625367678350451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprEGetUp_strip7_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 4
+        width: 35
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a59766a6aafabd90800000000000000
+      internalID: -7081071870423362143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprEGetUp_strip7_4
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 5
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f41d7b4a355bac770800000000000000
+      internalID: 8631911006659400015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprEGetUp_strip7_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 4
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bccdd0e3832c1a4b0800000000000000
+      internalID: -5430846128817054517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprEGetUp_strip7_6
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 4
+        width: 13
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43c9f92e99eba2690800000000000000
+      internalID: -7626073450857128908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 37a35380afca16c43a66f645f9aeb54b
     internalID: 0
     vertices: []
     indices: 

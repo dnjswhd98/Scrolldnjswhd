@@ -19,7 +19,6 @@ public class JaketTop : MonoBehaviour
         WeaponNum = 1;
         SRenderer = GetComponent<SpriteRenderer>();
         Mouse = GameObject.Find("MouseCurser");
-        GameObject obj = Resources.Load("Prefap/WeaponItem/Bat") as GameObject;
     }
 
     void Update()
@@ -36,7 +35,7 @@ public class JaketTop : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && !Attack)
         {
             Attack = true;
-            if(WeaponNum > 0)
+            if(WeaponNum >= 0)
             {
                 Invoke("SetAtkFlip", 0.26f);
             }
@@ -53,7 +52,7 @@ public class JaketTop : MonoBehaviour
                     GameObject obj = Resources.Load("Prefap/WeaponItem/Bat") as GameObject;
                     obj.transform.position = transform.position;
                     Instantiate(obj);
-                    //obj.GetComponent<Rigidbody2D>().AddForce((transform.position - Mouse.transform.position).normalized * 10.0f);
+                    obj.GetComponent<Rigidbody2D>().AddForce(Vector3.right * 1000.0f);
                     break;
                 case 2:
 
@@ -87,8 +86,8 @@ public class JaketTop : MonoBehaviour
         {
             if (collision.tag == "Enemy")
                 collision.transform.Find("MafiaTop").GetComponent<MafiaMoveTest>().Hit = true;
-            if (collision.tag == "Dog")
-                collision.GetComponent<DogMove>().Hit = true;
+            else if (collision.tag == "Dog")
+                collision.gameObject.GetComponent<DogMove>().Hit = true;
         }
     }
 }
