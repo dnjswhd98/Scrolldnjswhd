@@ -1,7 +1,31 @@
 fileFormatVersion: 2
 guid: e184ffa6f0d505148907701d039e1ebe
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 2454201022737778863
+    second: sprBloodSquirt2_strip8_0
+  - first:
+      213: 4768837106269663687
+    second: sprBloodSquirt2_strip8_1
+  - first:
+      213: -1935259115951870424
+    second: sprBloodSquirt2_strip8_2
+  - first:
+      213: -7646856383738714476
+    second: sprBloodSquirt2_strip8_3
+  - first:
+      213: 6733389130166526559
+    second: sprBloodSquirt2_strip8_4
+  - first:
+      213: 3612845742284204624
+    second: sprBloodSquirt2_strip8_5
+  - first:
+      213: 2160926211509344744
+    second: sprBloodSquirt2_strip8_6
+  - first:
+      213: 3044820346641677348
+    second: sprBloodSquirt2_strip8_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -101,11 +125,179 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: sprBloodSquirt2_strip8_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 3
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa88fa7c3d21f0220800000000000000
+      internalID: 2454201022737778863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprBloodSquirt2_strip8_1
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 4
+        width: 25
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c1b7eee4105e2240800000000000000
+      internalID: 4768837106269663687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprBloodSquirt2_strip8_2
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 3
+        width: 42
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82e2a5566149425e0800000000000000
+      internalID: -1935259115951870424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprBloodSquirt2_strip8_3
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 2
+        width: 56
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49663de32a8e0e590800000000000000
+      internalID: -7646856383738714476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprBloodSquirt2_strip8_4
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 0
+        width: 63
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f526d062dbdc17d50800000000000000
+      internalID: 6733389130166526559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprBloodSquirt2_strip8_5
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 2
+        width: 49
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05ae1299f08632230800000000000000
+      internalID: 3612845742284204624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprBloodSquirt2_strip8_6
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 2
+        width: 34
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e958d6b0f62dfd10800000000000000
+      internalID: 2160926211509344744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprBloodSquirt2_strip8_7
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 3
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42c757e19ff514a20800000000000000
+      internalID: 3044820346641677348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 44e678a1d1c45024e8a1ca93b7bb6e3a
     internalID: 0
     vertices: []
     indices: 
