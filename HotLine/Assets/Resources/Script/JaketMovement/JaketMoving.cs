@@ -4,21 +4,10 @@ using UnityEngine;
 
 public class JaketMoving : MonoBehaviour
 {
-    private float Hor;
-    private float Ver;
-    [SerializeField]private float Speed;
-    [SerializeField]private int WeaponeNum;
     private GameObject Mouse;
-    private float CameraX;
-    private float CameraY;
 
     float angle;
     Vector2 target;
-
-    void Start()
-    {
-        Speed = 0.1f;
-    }
 
     void Update()
     {
@@ -43,9 +32,9 @@ public class JaketMoving : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.transform.tag == "Walls")
+        if (collision.transform.tag == "Walls")
         {
-            Debug.Log("wall");
+            Debug.Log("Wall");
         }
     }
 }

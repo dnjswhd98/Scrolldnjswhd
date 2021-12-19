@@ -5,32 +5,47 @@ using UnityEngine;
 public class JaketTop : MonoBehaviour
 {
     private bool Moving;
-    static public Animator Anime;
     private bool Attack;
+    private bool GetGun;
+
+    private int DoubleBAttack;
+    private int BulletCount;
     public int WeaponNum;
+
+    static public Animator Anime;
 
     public int MaxRound;
     public int Round;
 
     private SpriteRenderer SRenderer;
-    private GameObject Mouse;
+    private GameObject BulletParent;
     private int FireTime;
+
+    private void Awake()
+    {
+        BulletParent = new GameObject("BulletParent");
+    }
 
     void Start()
     {
         FireTime = 0;
         Moving = false;
         Attack = false;
+        GetGun = false;
 
         Anime = GetComponent<Animator>();
 
-        WeaponNum = 7;
+        WeaponNum = 9;
 
+        BulletCount = 0;
         MaxRound = 0;
         Round = 0;
+        DoubleBAttack = 0;
 
         SRenderer = GetComponent<SpriteRenderer>();
-        Mouse = GameObject.Find("MouseCurser");
+
+        if(WeaponNum >= 7)
+            GetGunRound();
     }
 
     void Update()
@@ -44,18 +59,8 @@ public class JaketTop : MonoBehaviour
             Moving = false;
         }
 
-        if(WeaponNum >= 7)
-        {
-            switch(WeaponNum)
-            {
-                case 7:
-                    MaxRound = 24;
-                    Round = 24;
-                    break;
-                default:
-                    break;
-            }
-        }
+        if (GetGun)
+            GetGunRound();
         
         if(WeaponNum >= 0 && WeaponNum < 7)
         {
@@ -70,28 +75,95 @@ public class JaketTop : MonoBehaviour
         }
         else
         {
-            if (Input.GetMouseButton(0))
+            if (WeaponNum == 8 || WeaponNum == 9)
             {
-
-                if (FireTime == 0)
+                if (Input.GetMouseButtonDown(0))
                 {
-                    Attack = true;
-                    GameObject Bullet = Resources.Load("Prefap/Bullet") as GameObject;
-                    Bullet.transform.position = transform.position;
-                    Bullet.transform.rotation = transform.rotation;
-                    Instantiate(Bullet);
-                    --Round;
+                    if (Round > 0)
+                    {
+                        if (!Attack)
+                            Attack = true;
+
+                        if (Singleton.GetInstance.GetDisableList.Count == 0)
+                        {
+                            for (int i = 0; i < 16; ++i)
+                            {
+                                GameObject obj = Instantiate(Resources.Load("Prefap/Bullet") as GameObject);
+                                //++BulletCount;
+                                obj.SetActive(false);
+
+                                Singleton.GetInstance.GetDisableList.Push(obj);
+                            }
+                        }
+
+                        for (int i = 0; i < 8; ++i)
+                        {
+                            float temp = Random.Range(-3.0f, 3.0f);
+                            GameObject BulletObj = Singleton.GetInstance.GetDisableList.Pop();
+
+                            BulletObj.transform.position = transform.position;
+                            BulletObj.transform.rotation = transform.rotation * (Quaternion.Euler(0.0f, 0.0f, Random.Range(-5.0f, 5.0f)));
+
+                            BulletObj.SetActive(true);
+
+                            Singleton.GetInstance.GetEnableList.Add(BulletObj);
+                        }
+                        --Round;
+                        ++DoubleBAttack;
+                        if (DoubleBAttack > 1)
+                            DoubleBAttack = 0;
+                    }
                 }
-
-                ++FireTime;
-
-                if (FireTime > 6)
+                else
+                {
+                    Attack = false;
                     FireTime = 0;
+                }
             }
             else
             {
-                Attack = false;
-                FireTime = 0;
+                if (Input.GetMouseButton(0))
+                {
+                    if (!Attack)
+                        Attack = true;
+
+                    if (FireTime == 0 && Round > 0)
+                    {
+                        if (Singleton.GetInstance.GetDisableList.Count == 0)
+                        {
+                            for (int i = 0; i < MaxRound; ++i)
+                            {
+                                GameObject obj = Instantiate(Resources.Load("Prefap/Bullet") as GameObject);
+                                //++BulletCount;
+                                obj.SetActive(false);
+
+                                Singleton.GetInstance.GetDisableList.Push(obj);
+                            }
+                        }
+
+                        GameObject BulletObj = Singleton.GetInstance.GetDisableList.Pop();
+
+                        BulletObj.transform.position = transform.position;
+                        BulletObj.transform.rotation = transform.rotation;
+
+                        BulletObj.SetActive(true);
+
+                        Singleton.GetInstance.GetEnableList.Add(BulletObj);
+
+                        --Round;
+                    }
+
+                    ++FireTime;
+
+                    if (FireTime > 6)
+                        FireTime = 0;
+                }
+
+                else
+                {
+                    Attack = false;
+                    FireTime = 0;
+                }
             }
         }
 
@@ -119,6 +191,7 @@ public class JaketTop : MonoBehaviour
         Anime.SetBool("Moving", Moving);
         Anime.SetBool("Attack", Attack);
         Anime.SetInteger("Weapon", WeaponNum);
+        Anime.SetInteger("DoubleBAttack", DoubleBAttack);
     }
 
     private void SetAtkFlip()
@@ -139,6 +212,35 @@ public class JaketTop : MonoBehaviour
                 collision.transform.Find("MafiaTop").GetComponent<MafiaMoveTest>().Hit = true;
             else if (collision.tag == "Dog")
                 collision.gameObject.GetComponent<DogMove>().Hit = true;
+        }
+    }
+
+    private void GetGunRound()
+    {
+        if (WeaponNum >= 7)
+        {
+            switch (WeaponNum)
+            {
+                case 7:
+                    MaxRound = 24;
+                    Round = 24;
+                    break;
+                case 8:
+                    MaxRound = 6;
+                    Round = 6;
+                    break;
+                case 9:
+                    MaxRound = 2;
+                    Round = 2;
+                    break;
+                case 10:
+                    MaxRound = 30;
+                    Round = 30;
+                    break;
+                default:
+                    break;
+            }
+            GetGun = false;
         }
     }
 }

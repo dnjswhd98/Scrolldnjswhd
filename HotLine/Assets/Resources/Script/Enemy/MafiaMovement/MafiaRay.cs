@@ -11,8 +11,6 @@ public class MafiaRay : MonoBehaviour
     [SerializeField]private LayerMask OnstacleMask;
     [SerializeField]private Collider2D InTargets;
 
-    private float LineAngle = 0;
-
     void Start()
     {
 

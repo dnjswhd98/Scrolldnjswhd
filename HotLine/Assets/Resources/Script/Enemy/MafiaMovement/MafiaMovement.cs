@@ -30,6 +30,8 @@ public class MafiaMovement : MonoBehaviour
         {
             angle = Mathf.Atan2(Player.transform.position.y - target.y, Player.transform.position.x - target.x) * Mathf.Rad2Deg;
             this.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
+            transform.Translate(Vector3.right * 5.0f * Time.deltaTime, Space.Self);
         }
     }
 }

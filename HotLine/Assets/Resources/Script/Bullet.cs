@@ -5,7 +5,8 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     private float Speed = 1000.0f;
-    Rigidbody2D Rigid;
+    private Rigidbody2D Rigid;
+    private GameObject Player;
 
     void Start()
     {
@@ -13,13 +14,30 @@ public class Bullet : MonoBehaviour
         Rigid.AddForce(transform.right * Speed);
     }
 
-    void Update()
+    private void OnEnable()
     {
-        
+        Rigid.AddForce(transform.right * Speed);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void Update()
     {
-        
+        Player = GameObject.FindWithTag("player");
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.transform.tag == "Walls" || collision.transform.tag == "Enemy")
+        {
+            Singleton.GetInstance.GetEnableList.Remove(this.gameObject);
+            this.gameObject.SetActive(false);
+            Singleton.GetInstance.GetDisableList.Push(this.gameObject);
+
+            if(collision.transform.tag == "Enemy")
+            {
+                collision.transform.Find("MafiaTop").GetComponent<MafiaMoveTest>().PlayerWeapon =
+                    Player.transform.Find("JaketTop").GetComponent<JaketTop>().WeaponNum;
+                collision.transform.Find("MafiaTop").GetComponent<MafiaMoveTest>().Hit = true;
+            }
+        }
     }
 }

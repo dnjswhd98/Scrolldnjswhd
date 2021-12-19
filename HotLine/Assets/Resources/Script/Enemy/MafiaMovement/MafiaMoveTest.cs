@@ -7,8 +7,12 @@ public class MafiaMoveTest : MonoBehaviour
     private bool Dead;
     public bool Hit;
     public bool FindPlayer;
+    public int PlayerWeapon;
+    private int Deadrand;
+
     [SerializeField]private bool Attack;
     [SerializeField]public int WeaponNum;
+
     private Vector3 Direction;
     private Animator Anime;
     private Rigidbody2D Rigid;
@@ -31,6 +35,11 @@ public class MafiaMoveTest : MonoBehaviour
         {
             Rigid.AddForce(Direction * 1000);
             Dead = true;
+
+            if (PlayerWeapon >= 7)
+            {
+                Deadrand = Random.Range(0, 4);
+            }
         }
 
         if (Dead)
@@ -40,6 +49,8 @@ public class MafiaMoveTest : MonoBehaviour
             transform.parent.GetComponent<MafiaMovement>().enabled = false;
             transform.parent.GetComponent<MafiaRay>().enabled = false;
             transform.parent.GetComponent<CapsuleCollider2D>().enabled = false;
+
+            
         }
 
         if (FindPlayer && WeaponNum >= 7)
@@ -50,6 +61,8 @@ public class MafiaMoveTest : MonoBehaviour
         Anime.SetBool("Dead", Dead);
         Anime.SetBool("Attack", Attack);
         Anime.SetInteger("WeaponNum", WeaponNum);
+        Anime.SetInteger("PlayerWeapon", PlayerWeapon);
+        Anime.SetInteger("DeadRand", Deadrand);
     }
 
     private void OnTriggerStay2D(Collider2D collision)

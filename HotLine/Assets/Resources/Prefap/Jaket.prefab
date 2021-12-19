@@ -232,6 +232,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WeaponNum: 0
+  MaxRound: 0
+  Round: 0
 --- !u!61 &4171541248307204626
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -321,8 +323,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6decfa8cab6f144c9fdf6dfec98b034, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 0
-  WeaponeNum: 0
 --- !u!50 &7405165126951037668
 Rigidbody2D:
   serializedVersion: 4

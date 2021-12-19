@@ -1,7 +1,19 @@
 fileFormatVersion: 2
 guid: 27054575fbbd6954988592c6f5ef9d0c
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 7249775506897706102
+    second: sprEBackShotgun_strip4_0
+  - first:
+      213: -7116038957487651077
+    second: sprEBackShotgun_strip4_1
+  - first:
+      213: 4919466922839247096
+    second: sprEBackShotgun_strip4_2
+  - first:
+      213: -6549227475452289360
+    second: sprEBackShotgun_strip4_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -101,11 +113,95 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: sprEBackShotgun_strip4_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 18
+        width: 49
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67c17fd99606c9460800000000000000
+      internalID: 7249775506897706102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprEBackShotgun_strip4_1
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 18
+        width: 49
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf68b134540ce3d90800000000000000
+      internalID: -7116038957487651077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprEBackShotgun_strip4_2
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 18
+        width: 49
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f80e141a15754440800000000000000
+      internalID: 4919466922839247096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprEBackShotgun_strip4_3
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 18
+        width: 51
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0be10747f487c15a0800000000000000
+      internalID: -6549227475452289360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: c2420513aa3a52e4b82e35fa0569a739
     internalID: 0
     vertices: []
     indices: 

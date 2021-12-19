@@ -1,7 +1,22 @@
 fileFormatVersion: 2
 guid: e1f30e37fe2a4154b8a90a986e67181a
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -3029389729040171433
+    second: sprPAttackDoubleBarrel2_strip5_0
+  - first:
+      213: -8638936003623619334
+    second: sprPAttackDoubleBarrel2_strip5_1
+  - first:
+      213: -2429877926884226836
+    second: sprPAttackDoubleBarrel2_strip5_2
+  - first:
+      213: -388784913853078029
+    second: sprPAttackDoubleBarrel2_strip5_3
+  - first:
+      213: -7542814594728286891
+    second: sprPAttackDoubleBarrel2_strip5_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -101,11 +116,116 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: sprPAttackDoubleBarrel2_strip5_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 7
+        width: 39
+        height: 16
+      alignment: 9
+      pivot: {x: 0.23076923, y: 0.5625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75ef752871275f5d0800000000000000
+      internalID: -3029389729040171433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprPAttackDoubleBarrel2_strip5_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 7
+        width: 40
+        height: 16
+      alignment: 9
+      pivot: {x: 0.225, y: 0.5625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af47eaac9755c1880800000000000000
+      internalID: -8638936003623619334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprPAttackDoubleBarrel2_strip5_2
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 7
+        width: 40
+        height: 16
+      alignment: 9
+      pivot: {x: 0.225, y: 0.5625}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce8c08846e6574ed0800000000000000
+      internalID: -2429877926884226836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprPAttackDoubleBarrel2_strip5_3
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 7
+        width: 32
+        height: 17
+      alignment: 9
+      pivot: {x: 0.28125, y: 0.5294118}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f5a1c34e22ca9af0800000000000000
+      internalID: -388784913853078029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprPAttackDoubleBarrel2_strip5_4
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 7
+        width: 32
+        height: 17
+      alignment: 9
+      pivot: {x: 0.28125, y: 0.5294118}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 555a692f61a825790800000000000000
+      internalID: -7542814594728286891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 041c6f87471181846972783d7ad0cb96
     internalID: 0
     vertices: []
     indices: 
