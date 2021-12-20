@@ -33,6 +33,11 @@ public class GameManager : MonoBehaviour
         Elist = Singleton.EnemyList;
     }
 
+    private void Update()
+    {
+     if(Singleton.EnemyList.Count == 0)   
+    }
+
     private void SpawnObject()
     {
         PlayerPrefab.transform.position = GameObject.Find("PlayerSpawn").transform.position;
@@ -52,8 +57,6 @@ public class GameManager : MonoBehaviour
                 EnemyPrefab.transform.Find("MafiaTop").GetComponent<MafiaMoveTest>().WeaponNum = 7;
             else
                 EnemyPrefab.transform.Find("MafiaTop").GetComponent<MafiaMoveTest>().WeaponNum = 9;
-
-            //EnemyPrefab.transform.Find("MafiaTop").GetComponent<MafiaMoveTest>().SetWeaponNum(7);
             Instantiate(EnemyPrefab);
         }
 

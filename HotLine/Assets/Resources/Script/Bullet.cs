@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    private float Speed = 1000.0f;
+    private float Speed = 2000.0f;
     private Rigidbody2D Rigid;
     private GameObject Player;
+    public GameObject FireTo;
 
     void Start()
     {
@@ -16,7 +17,8 @@ public class Bullet : MonoBehaviour
 
     private void OnEnable()
     {
-        Rigid.AddForce(transform.right * Speed);
+        if(gameObject.active)
+            Rigid.AddForce(transform.right * Speed);
     }
 
     private void Update()
@@ -26,17 +28,49 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.transform.tag == "Walls" || collision.transform.tag == "Enemy")
+        if (collision.transform.tag == "Walls")
         {
-            Singleton.GetInstance.GetEnableList.Remove(this.gameObject);
+            Singleton.GetInstance.GetEnableList.Remove(gameObject);
             this.gameObject.SetActive(false);
-            Singleton.GetInstance.GetDisableList.Push(this.gameObject);
+            Singleton.GetInstance.GetDisableList.Push(gameObject);
+            FireTo = null;
+        }
 
-            if(collision.transform.tag == "Enemy")
+        if (FireTo.transform.tag == "player")
+        {
+            if (collision.transform.tag == "Enemy")
             {
+                Singleton.GetInstance.GetEnableList.Remove(gameObject);
+                this.gameObject.SetActive(false);
+                Singleton.GetInstance.GetDisableList.Push(gameObject);
+
                 collision.transform.Find("MafiaTop").GetComponent<MafiaMoveTest>().PlayerWeapon =
                     Player.transform.Find("JaketTop").GetComponent<JaketTop>().WeaponNum;
                 collision.transform.Find("MafiaTop").GetComponent<MafiaMoveTest>().Hit = true;
+
+                FireTo = null;
+
+                Singleton.EnemyList.Remove(collision.gameObject);
+            }
+            else if(collision.transform.tag == "Dog")
+            {
+                Singleton.GetInstance.GetEnableList.Remove(gameObject);
+                this.gameObject.SetActive(false);
+                Singleton.GetInstance.GetDisableList.Push(gameObject);
+
+                collision.GetComponent<DogMove>().Hit = true;
+                Singleton.EnemyList.Remove(collision.gameObject);
+            }
+        }
+        else if (FireTo.transform.tag == "Enemy")
+        {
+            if (collision.transform.tag == "player")
+            {
+                Singleton.GetInstance.GetEnableList.Remove(gameObject);
+                this.gameObject.SetActive(false);
+                Singleton.GetInstance.GetDisableList.Push(gameObject);
+
+                FireTo = null;
             }
         }
     }

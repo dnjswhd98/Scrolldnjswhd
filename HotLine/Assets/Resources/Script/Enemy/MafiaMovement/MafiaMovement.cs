@@ -26,12 +26,15 @@ public class MafiaMovement : MonoBehaviour
         target = transform.position;
         Player = GameObject.Find("Jaket(Clone)");
 
-        if(FindPlayer)
+        if (FindPlayer)
         {
             angle = Mathf.Atan2(Player.transform.position.y - target.y, Player.transform.position.x - target.x) * Mathf.Rad2Deg;
             this.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
-            transform.Translate(Vector3.right * 5.0f * Time.deltaTime, Space.Self);
+            if (!transform.Find("MafiaTop").GetComponent<MafiaMoveTest>().Stop)
+            {
+                transform.Translate(Vector3.right * 5.0f * Time.deltaTime, Space.Self);
+            }
         }
     }
 }

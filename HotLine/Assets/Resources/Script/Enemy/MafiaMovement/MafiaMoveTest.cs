@@ -5,10 +5,12 @@ using UnityEngine;
 public class MafiaMoveTest : MonoBehaviour
 {
     private bool Dead;
+    public bool Stop;
     public bool Hit;
     public bool FindPlayer;
     public int PlayerWeapon;
     private int Deadrand;
+    private int FireTime;
 
     [SerializeField]private bool Attack;
     [SerializeField]public int WeaponNum;
@@ -25,6 +27,8 @@ public class MafiaMoveTest : MonoBehaviour
         Hit = false;
         Dead = false;
         Attack = false;
+        Stop = false;
+        FireTime = 0;
     }
 
     void Update()
@@ -33,6 +37,7 @@ public class MafiaMoveTest : MonoBehaviour
         Direction = (transform.position - Player.transform.position).normalized;
         if(Hit)
         {
+            Attack = true;
             Rigid.AddForce(Direction * 1000);
             Dead = true;
 
@@ -53,9 +58,83 @@ public class MafiaMoveTest : MonoBehaviour
             
         }
 
-        if (FindPlayer && WeaponNum >= 7)
+        if (FindPlayer && WeaponNum >= 7 && !Dead)
         {
-            Attack = true;
+
+            if (WeaponNum >= 8 && WeaponNum <= 9)
+            {
+                if (!Attack)
+                {
+                    Attack = true;
+                    if (Singleton.GetInstance.GetDisableList.Count == 0)
+                    {
+                        for (int i = 0; i < 16; ++i)
+                        {
+                            GameObject obj = Instantiate(Resources.Load("Prefap/Bullet") as GameObject);
+                            //++BulletCount;
+                            obj.SetActive(false);
+
+                            Singleton.GetInstance.GetDisableList.Push(obj);
+                        }
+                    }
+
+                    for (int i = 0; i < 8; ++i)
+                    {
+                        float temp = Random.Range(-3.0f, 3.0f);
+                        GameObject BulletObj = Singleton.GetInstance.GetDisableList.Pop();
+
+                        BulletObj.transform.position = transform.position;
+                        BulletObj.transform.rotation = transform.rotation * (Quaternion.Euler(0.0f, 0.0f, Random.Range(-5.0f, 5.0f)));
+                        BulletObj.GetComponent<Bullet>().FireTo = transform.parent.gameObject;
+
+                        BulletObj.SetActive(true);
+
+                        Singleton.GetInstance.GetEnableList.Add(BulletObj);
+                    }
+                }
+                if (FireTime == 0)
+                    Attack = false;
+
+                ++FireTime;
+
+                if (FireTime > 100)
+                    FireTime = 0;
+            }
+            else
+            {
+                if (!Attack)
+                {
+                    Attack = true;
+                    if (Singleton.GetInstance.GetDisableList.Count == 0)
+                    {
+                        for (int i = 0; i < 16; ++i)
+                        {
+                            GameObject obj = Instantiate(Resources.Load("Prefap/Bullet") as GameObject);
+                            //++BulletCount;
+                            obj.SetActive(false);
+
+                            Singleton.GetInstance.GetDisableList.Push(obj);
+                        }
+                    }
+                    GameObject BulletObj = Singleton.GetInstance.GetDisableList.Pop();
+
+                    BulletObj.transform.position = transform.position;
+                    BulletObj.transform.rotation = transform.rotation;
+                    BulletObj.GetComponent<Bullet>().FireTo = transform.parent.gameObject;
+
+                    BulletObj.SetActive(true);
+
+                    Singleton.GetInstance.GetEnableList.Add(BulletObj);
+                }
+                if (FireTime == 0)
+                    Attack = false;
+
+                ++FireTime;
+
+                if (FireTime > 10)
+                    FireTime = 0;
+            }
+            
         }
 
         Anime.SetBool("Dead", Dead);
@@ -67,9 +146,26 @@ public class MafiaMoveTest : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(FindPlayer && WeaponNum < 7)
+        if (collision.transform.tag == "player")
         {
-            Attack = true;
+            if (FindPlayer)
+            {
+                if (WeaponNum < 7)
+                    Attack = true;
+                else
+                    Stop = true;
+            }
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.transform.tag == "player")
+        {
+            if (FindPlayer)
+            {
+                if (WeaponNum >= 7)
+                    Stop = false;
+            }
         }
     }
 }

@@ -218,8 +218,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8ce5b8e01352b5468a31f4a7bbacdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Stop: 0
   Hit: 0
   FindPlayer: 0
+  PlayerWeapon: 0
   Attack: 0
   WeaponNum: 9
 --- !u!61 &3094011440026354576
@@ -313,7 +315,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 250
+  m_LinearDrag: 10
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}

@@ -35,7 +35,7 @@ public class JaketTop : MonoBehaviour
 
         Anime = GetComponent<Animator>();
 
-        WeaponNum = 9;
+        WeaponNum = 7;
 
         BulletCount = 0;
         MaxRound = 0;
@@ -103,6 +103,7 @@ public class JaketTop : MonoBehaviour
 
                             BulletObj.transform.position = transform.position;
                             BulletObj.transform.rotation = transform.rotation * (Quaternion.Euler(0.0f, 0.0f, Random.Range(-5.0f, 5.0f)));
+                            BulletObj.GetComponent<Bullet>().FireTo = gameObject;
 
                             BulletObj.SetActive(true);
 
@@ -145,6 +146,7 @@ public class JaketTop : MonoBehaviour
 
                         BulletObj.transform.position = transform.position;
                         BulletObj.transform.rotation = transform.rotation;
+                        BulletObj.GetComponent<Bullet>().FireTo = transform.parent.gameObject;
 
                         BulletObj.SetActive(true);
 
@@ -175,7 +177,7 @@ public class JaketTop : MonoBehaviour
                     GameObject obj = Resources.Load("Prefap/WeaponItem/Bat") as GameObject;
                     obj.transform.position = transform.position;
                     Instantiate(obj);
-                    obj.GetComponent<Rigidbody2D>().AddForce(Vector3.right * 1000.0f);
+                    obj.GetComponent<Rigidbody2D>().AddForce(transform.right * 1000.0f);
                     break;
                 case 2:
 
@@ -209,7 +211,10 @@ public class JaketTop : MonoBehaviour
         if (Attack)
         {
             if (collision.tag == "Enemy")
+            {
+                collision.transform.Find("MafiaTop").GetComponent<MafiaMoveTest>().PlayerWeapon = WeaponNum;
                 collision.transform.Find("MafiaTop").GetComponent<MafiaMoveTest>().Hit = true;
+            }
             else if (collision.tag == "Dog")
                 collision.gameObject.GetComponent<DogMove>().Hit = true;
         }

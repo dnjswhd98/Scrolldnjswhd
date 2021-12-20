@@ -56,6 +56,11 @@ public class Singleton
         {
             EnemyList.Add(GameObject.Find("Enemy" + i + "(Clone)"));
         }
+        for (int i = 0; i < GameManager.DSpawnList.Count; ++i)
+        {
+            EnemyList.Add(GameObject.Find("Dog" + i + "(Clone)"));
+        }
+
     }
 
     public void SetEnemyHit(GameObject _obj, bool _hit)
