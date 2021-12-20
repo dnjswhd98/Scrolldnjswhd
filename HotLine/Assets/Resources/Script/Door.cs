@@ -12,16 +12,16 @@ public class Door : MonoBehaviour
     {
         DoorPosition = transform.position;
         DoorRote = transform.rotation;
-        MaxRote = Quaternion.Euler(0.0f, 0.0f, 120.0f);
+        MaxRote = Quaternion.Euler(0.0f, 0.0f, 110.0f);
     }
 
     void Update()
     {
         transform.position = DoorPosition;
-        //if(transform.rotation.z < DoorRote.z + MaxRote.z || transform.rotation.z < DoorRote.z + MaxRote.z)
-        //{
-        //
-        //}
+        if(transform.rotation.z < DoorRote.z + MaxRote.z || transform.rotation.z < DoorRote.z + MaxRote.z)
+        {
+        
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

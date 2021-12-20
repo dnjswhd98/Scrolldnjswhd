@@ -13,6 +13,7 @@ public class MafiaMovement : MonoBehaviour
     private Vector2 target;
 
     private GameObject Player;
+    private GameObject MovePoint;
 
     void Start()
     {
@@ -23,6 +24,8 @@ public class MafiaMovement : MonoBehaviour
 
     void Update()
     {
+        if()
+
         target = transform.position;
         Player = GameObject.Find("Jaket(Clone)");
 

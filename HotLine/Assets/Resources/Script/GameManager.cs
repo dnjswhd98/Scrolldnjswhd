@@ -35,7 +35,10 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-     if(Singleton.EnemyList.Count == 0)   
+     if(Singleton.EnemyList.Count == 0)
+        {
+
+        }
     }
 
     private void SpawnObject()
