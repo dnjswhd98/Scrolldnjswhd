@@ -28,7 +28,7 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.transform.tag == "Walls")
+        if (collision.transform.tag == "Walls" || collision.transform.tag == "Door")
         {
             Singleton.GetInstance.GetEnableList.Remove(gameObject);
             this.gameObject.SetActive(false);
