@@ -49,8 +49,6 @@ public class Bullet : MonoBehaviour
                 collision.transform.Find("MafiaTop").GetComponent<MafiaMoveTest>().Hit = true;
 
                 FireTo = null;
-
-                Singleton.EnemyList.Remove(collision.gameObject);
             }
             else if(collision.transform.tag == "Dog")
             {
@@ -59,7 +57,8 @@ public class Bullet : MonoBehaviour
                 Singleton.GetInstance.GetDisableList.Push(gameObject);
 
                 collision.GetComponent<DogMove>().Hit = true;
-                Singleton.EnemyList.Remove(collision.gameObject);
+
+                FireTo = null;
             }
         }
         else if (FireTo.transform.tag == "Enemy")

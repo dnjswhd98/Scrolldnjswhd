@@ -18,10 +18,10 @@ public class Door : MonoBehaviour
     void Update()
     {
         transform.position = DoorPosition;
-        if(transform.rotation.z < DoorRote.z + MaxRote.z || transform.rotation.z < DoorRote.z + MaxRote.z)
-        {
-        
-        }
+        //if(transform.rotation.z < DoorRote.z + MaxRote.z || transform.rotation.z < DoorRote.z + MaxRote.z)
+        //{
+        //
+        //}
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

@@ -49,13 +49,13 @@ public class MafiaMoveTest : MonoBehaviour
 
         if (Dead)
         {
+            Singleton.EnemyList.Remove(transform.parent.gameObject);
             Hit = false;
             transform.parent.GetComponent<CapsuleCollider2D>().isTrigger = true;
             transform.parent.GetComponent<MafiaMovement>().enabled = false;
             transform.parent.GetComponent<MafiaRay>().enabled = false;
             transform.parent.GetComponent<CapsuleCollider2D>().enabled = false;
 
-            
         }
 
         if (FindPlayer && WeaponNum >= 7 && !Dead)

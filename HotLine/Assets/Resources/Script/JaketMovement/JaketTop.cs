@@ -125,40 +125,43 @@ public class JaketTop : MonoBehaviour
             {
                 if (Input.GetMouseButton(0))
                 {
-                    if (!Attack)
-                        Attack = true;
-
-                    if (FireTime == 0 && Round > 0)
+                    if (Round > 0)
                     {
-                        if (Singleton.GetInstance.GetDisableList.Count == 0)
-                        {
-                            for (int i = 0; i < MaxRound; ++i)
-                            {
-                                GameObject obj = Instantiate(Resources.Load("Prefap/Bullet") as GameObject);
-                                //++BulletCount;
-                                obj.SetActive(false);
+                        if (!Attack)
+                            Attack = true;
 
-                                Singleton.GetInstance.GetDisableList.Push(obj);
+                        if (FireTime == 0 && Round > 0)
+                        {
+                            if (Singleton.GetInstance.GetDisableList.Count == 0)
+                            {
+                                for (int i = 0; i < MaxRound; ++i)
+                                {
+                                    GameObject obj = Instantiate(Resources.Load("Prefap/Bullet") as GameObject);
+                                    //++BulletCount;
+                                    obj.SetActive(false);
+
+                                    Singleton.GetInstance.GetDisableList.Push(obj);
+                                }
                             }
+
+                            GameObject BulletObj = Singleton.GetInstance.GetDisableList.Pop();
+
+                            BulletObj.transform.position = transform.position;
+                            BulletObj.transform.rotation = transform.rotation;
+                            BulletObj.GetComponent<Bullet>().FireTo = transform.parent.gameObject;
+
+                            BulletObj.SetActive(true);
+
+                            Singleton.GetInstance.GetEnableList.Add(BulletObj);
+
+                            --Round;
                         }
 
-                        GameObject BulletObj = Singleton.GetInstance.GetDisableList.Pop();
+                        ++FireTime;
 
-                        BulletObj.transform.position = transform.position;
-                        BulletObj.transform.rotation = transform.rotation;
-                        BulletObj.GetComponent<Bullet>().FireTo = transform.parent.gameObject;
-
-                        BulletObj.SetActive(true);
-
-                        Singleton.GetInstance.GetEnableList.Add(BulletObj);
-
-                        --Round;
+                        if (FireTime > 6)
+                            FireTime = 0;
                     }
-
-                    ++FireTime;
-
-                    if (FireTime > 6)
-                        FireTime = 0;
                 }
 
                 else

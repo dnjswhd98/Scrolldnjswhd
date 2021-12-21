@@ -38,7 +38,7 @@ public class JaketMoving : MonoBehaviour
         }
         if(collision.transform.tag == "Door")
         {
-            collision.gameObject.GetComponent<Rigidbody2D>().AddForce(transform.right * 500.0f);
+            //collision.gameObject.GetComponent<Rigidbody2D>().AddForce(collision.transform.up * -500.0f);
         }
     }
 }

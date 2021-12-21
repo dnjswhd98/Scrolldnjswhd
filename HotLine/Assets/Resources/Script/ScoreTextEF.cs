@@ -5,18 +5,26 @@ using UnityEngine.UI;
 
 public class ScoreTextEF : MonoBehaviour
 {
-    private bool rot;
-
-    private Shadow Tshadow;
+    private Text uiText;
+    private bool RotF;
 
     void Start()
     {
-        rot = false;
-        Tshadow = GetComponent<Shadow>();
+        uiText = GetComponent<Text>();
+        RotF = false;
     }
 
     void Update()
     {
+        if (Singleton.EnemyList.Count != 0)
+            uiText.text = "Enemy " + Singleton.EnemyList.Count + " LEFT";
+        else
+            uiText.text = "Floor Clear!";
+
+        if (!RotF && transform.rotation == Quaternion.Euler(0.0f, 0.0f, 9.0f))
+        {
+
+        }
         
     }
 }

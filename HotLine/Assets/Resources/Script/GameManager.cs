@@ -49,7 +49,6 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < ESpawnList.Count; ++i)
         {
             EnemyPrefab.transform.position = GameObject.Find("EnemySpawn" + i).transform.position;
-            EnemyPrefab.name = ("Enemy" + i);
             if (i < 2)
                 EnemyPrefab.transform.Find("MafiaTop").GetComponent<MafiaMoveTest>().WeaponNum = 1;
             else if (i >= 2 && i < 4)
@@ -57,9 +56,12 @@ public class GameManager : MonoBehaviour
             else if (i == 4)
                 EnemyPrefab.transform.Find("MafiaTop").GetComponent<MafiaMoveTest>().WeaponNum = 3;
             else if (i >= 5 && i < 7)
+            {
                 EnemyPrefab.transform.Find("MafiaTop").GetComponent<MafiaMoveTest>().WeaponNum = 7;
+            }
             else
                 EnemyPrefab.transform.Find("MafiaTop").GetComponent<MafiaMoveTest>().WeaponNum = 9;
+            EnemyPrefab.name = ("Enemy" + i);
             Instantiate(EnemyPrefab);
         }
 

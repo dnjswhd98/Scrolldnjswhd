@@ -11,6 +11,7 @@ TagManager:
   - Item
   - Dog
   - Door
+  - WayPoint
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - UI
   - 
   - Player
-  - 
+  - Top
   - Bullet
   - 
   - 
@@ -43,7 +44,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Waypoint
   m_SortingLayers:
   - name: Default
     uniqueID: 0
