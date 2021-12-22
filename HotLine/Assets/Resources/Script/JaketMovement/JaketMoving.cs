@@ -36,9 +36,23 @@ public class JaketMoving : MonoBehaviour
         {
             Debug.Log("Wall");
         }
-        if(collision.transform.tag == "Door")
+
+
+        if (collision.transform.tag == "Door")
         {
             //collision.gameObject.GetComponent<Rigidbody2D>().AddForce(collision.transform.up * -500.0f);
         }
     }
+    //private void OnCollisionStay2D(Collision2D collision)
+    //{
+    //
+    //    if (collision.transform.tag == "Item")
+    //    {
+    //        if (Input.GetMouseButtonDown(1))
+    //        {
+    //            transform.Find("JaketTop").GetComponent<JaketTop>().WeaponNum = collision.gameObject.GetComponent<WeaponItems>().WeaponItemNum;
+    //            Destroy(collision.gameObject);
+    //        }
+    //    }
+    //}
 }

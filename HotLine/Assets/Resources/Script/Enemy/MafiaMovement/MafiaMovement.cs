@@ -12,7 +12,9 @@ public class MafiaMovement : MonoBehaviour
     private Vector2 target;
 
     private GameObject Player;
-    [SerializeField]private GameObject MovePoint;
+    public GameObject MovePoint;
+
+    private Animator EnemyLeg;
 
     [SerializeField]private List<GameObject> WayPointList;
 
@@ -24,7 +26,7 @@ public class MafiaMovement : MonoBehaviour
 
     void Start()
     {
-        MovePoint = GameObject.Find("Enemy1Point");
+        EnemyLeg = transform.Find("MafiaLeg").GetComponent<Animator>();
         WayPointList = new List<GameObject>();
         NodeNum = 0;
     }
@@ -35,21 +37,7 @@ public class MafiaMovement : MonoBehaviour
         {
             if(MovePoint)
             {
-                if(MovePoint.name == "Enemy1Point" && gameObject.name == "Enemy1(Clone)")
-                {
-                    if (WayPointList.Count < MovePoint.transform.childCount)
-                    {
-                        for (int i = 1; i<MovePoint.transform.childCount + 1; ++i)
-                            WayPointList.Add(MovePoint.transform.Find("W" + i).gameObject);
-                    }
-
-                    angle = Mathf.Atan2(WayPointList[NodeNum].transform.position.y - target.y,
-                        WayPointList[NodeNum].transform.position.x - target.x) * Mathf.Rad2Deg;
-                    transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-                    if(!Move)
-                        Move = true;
-
-                }
+                EnemyWayPoint();
             }
         }
 
@@ -78,6 +66,7 @@ public class MafiaMovement : MonoBehaviour
                 }
             }
         }
+        EnemyLeg.SetBool("Walking", Move);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -93,12 +82,60 @@ public class MafiaMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.transform.name == "W" + (NodeNum + 1))
+        if (collision.transform.tag == "WayPoint")
         {
-            ++NodeNum;
-            if (NodeNum > WayPointList.Count - 1)
-                NodeNum = 0;
+            if (collision.transform.name == "W" + (NodeNum + 1))
+            {
+                ++NodeNum;
+                if (NodeNum > WayPointList.Count - 1)
+                    NodeNum = 0;
+            }
         }
+    }
 
+    private void EnemyWayPoint()
+    {
+        if (MovePoint.name == "Enemy1Point" && gameObject.name == "Enemy1(Clone)")
+        {
+            if (WayPointList.Count < MovePoint.transform.childCount)
+            {
+                for (int i = 1; i < MovePoint.transform.childCount + 1; ++i)
+                    WayPointList.Add(MovePoint.transform.Find("W" + i).gameObject);
+            }
+
+            angle = Mathf.Atan2(WayPointList[NodeNum].transform.position.y - target.y,
+                WayPointList[NodeNum].transform.position.x - target.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            if (!Move)
+                Move = true;
+        }
+        else if (MovePoint.name == "Enemy2Point" && gameObject.name == "Enemy2(Clone)")
+        {
+            if (WayPointList.Count < MovePoint.transform.childCount)
+            {
+                for (int i = 1; i < MovePoint.transform.childCount + 1; ++i)
+                    WayPointList.Add(MovePoint.transform.Find("W" + i).gameObject);
+            }
+
+            angle = Mathf.Atan2(WayPointList[NodeNum].transform.position.y - target.y,
+                WayPointList[NodeNum].transform.position.x - target.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            if (!Move)
+                Move = true;
+        }
+        else if (MovePoint.name == "Enemy8Point" && gameObject.name == "Enemy8(Clone)")
+        {
+            if (WayPointList.Count < MovePoint.transform.childCount)
+            {
+                for (int i = 1; i < MovePoint.transform.childCount + 1; ++i)
+                    WayPointList.Add(MovePoint.transform.Find("W" + i).gameObject);
+            }
+
+            angle = Mathf.Atan2(WayPointList[NodeNum].transform.position.y - target.y,
+                WayPointList[NodeNum].transform.position.x - target.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            if (!Move)
+                Move = true;
+        }
     }
 }

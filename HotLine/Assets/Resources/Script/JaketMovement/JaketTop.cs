@@ -35,7 +35,7 @@ public class JaketTop : MonoBehaviour
 
         Anime = GetComponent<Animator>();
 
-        WeaponNum = 7;
+        WeaponNum = 3;
 
         BulletCount = 0;
         MaxRound = 0;
@@ -177,13 +177,64 @@ public class JaketTop : MonoBehaviour
             switch(WeaponNum)
             {
                 case 1:
-                    GameObject obj = Resources.Load("Prefap/WeaponItem/Bat") as GameObject;
-                    obj.transform.position = transform.position;
-                    Instantiate(obj);
-                    obj.GetComponent<Rigidbody2D>().AddForce(transform.right * 1000.0f);
+                    {
+                        GameObject obj = Resources.Load("Prefap/WeaponItem/Bat") as GameObject;
+                        obj.transform.position = transform.position;
+                        obj.transform.rotation = transform.rotation;
+                        obj.GetComponent<WeaponItems>().Throw = true;
+                        obj.GetComponent<WeaponItems>().WeaponItemNum = WeaponNum;
+                        Instantiate(obj);
+                    }
                     break;
                 case 2:
-
+                    {
+                        GameObject obj = Resources.Load("Prefap/WeaponItem/Club") as GameObject;
+                        obj.transform.position = transform.position;
+                        obj.transform.rotation = transform.rotation;
+                        obj.GetComponent<WeaponItems>().Throw = true;
+                        obj.GetComponent<WeaponItems>().WeaponItemNum = WeaponNum;
+                        Instantiate(obj);
+                    }
+                    break;
+                case 3:
+                    {
+                        GameObject obj = Resources.Load("Prefap/WeaponItem/Knife") as GameObject;
+                        obj.transform.position = transform.position;
+                        obj.transform.rotation = transform.rotation;
+                        obj.GetComponent<WeaponItems>().Throw = true;
+                        obj.GetComponent<WeaponItems>().WeaponItemNum = WeaponNum;
+                        Instantiate(obj);
+                    }
+                    break;
+                case 7:
+                    {
+                        GameObject obj = Resources.Load("Prefap/WeaponItem/M16") as GameObject;
+                        obj.transform.position = transform.position;
+                        obj.transform.rotation = transform.rotation;
+                        obj.GetComponent<WeaponItems>().Throw = true;
+                        obj.GetComponent<WeaponItems>().WeaponItemNum = WeaponNum;
+                        Instantiate(obj);
+                    }
+                    break;
+                case 8:
+                    {
+                        GameObject obj = Resources.Load("Prefap/WeaponItem/Shotgun") as GameObject;
+                        obj.transform.position = transform.position;
+                        obj.transform.rotation = transform.rotation;
+                        obj.GetComponent<WeaponItems>().Throw = true;
+                        obj.GetComponent<WeaponItems>().WeaponItemNum = WeaponNum;
+                        Instantiate(obj);
+                    }
+                    break;
+                case 9:
+                    {
+                        GameObject obj = Resources.Load("Prefap/WeaponItem/DoubleB") as GameObject;
+                        obj.transform.position = transform.position;
+                        obj.transform.rotation = transform.rotation;
+                        obj.GetComponent<WeaponItems>().Throw = true;
+                        obj.GetComponent<WeaponItems>().WeaponItemNum = WeaponNum;
+                        Instantiate(obj);
+                    }
                     break;
                 default:
                     break;
@@ -220,6 +271,14 @@ public class JaketTop : MonoBehaviour
             }
             else if (collision.tag == "Dog")
                 collision.gameObject.GetComponent<DogMove>().Hit = true;
+        }
+        if (collision.transform.tag == "Item")
+        {
+            if (Input.GetMouseButtonDown(1))
+            {
+                transform.Find("JaketTop").GetComponent<JaketTop>().WeaponNum = collision.gameObject.GetComponent<WeaponItems>().WeaponItemNum;
+                Destroy(collision.gameObject);
+            }
         }
     }
 

@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] private GameObject PlayerPrefab;
-    [SerializeField] private GameObject EnemyPrefab;
-    [SerializeField] private GameObject DogPrefab;
+    private GameObject PlayerPrefab;
+    private GameObject EnemyPrefab;
+    private GameObject DogPrefab;
+    private GameObject FloorArow;
     static public List<GameObject> ESpawnList;
     static public List<GameObject> DSpawnList;
     [SerializeField] private List<GameObject> Elist;
@@ -16,6 +17,7 @@ public class GameManager : MonoBehaviour
         PlayerPrefab = Resources.Load("Prefap/Jaket") as GameObject;
         EnemyPrefab = Resources.Load("Prefap/EnemyMafiaBat") as GameObject;
         DogPrefab = Resources.Load("Prefap/Dog") as GameObject;
+        
     }
 
     private void Start()
@@ -50,9 +52,17 @@ public class GameManager : MonoBehaviour
         {
             EnemyPrefab.transform.position = GameObject.Find("EnemySpawn" + i).transform.position;
             if (i < 2)
+            {
                 EnemyPrefab.transform.Find("MafiaTop").GetComponent<MafiaMoveTest>().WeaponNum = 1;
+                if (i == 1)
+                    EnemyPrefab.GetComponent<MafiaMovement>().MovePoint = GameObject.Find("Enemy1Point");
+            }
             else if (i >= 2 && i < 4)
+            {
                 EnemyPrefab.transform.Find("MafiaTop").GetComponent<MafiaMoveTest>().WeaponNum = 2;
+                if (i == 2)
+                    EnemyPrefab.GetComponent<MafiaMovement>().MovePoint = GameObject.Find("Enemy2Point");
+            }
             else if (i == 4)
                 EnemyPrefab.transform.Find("MafiaTop").GetComponent<MafiaMoveTest>().WeaponNum = 3;
             else if (i >= 5 && i < 7)
@@ -60,7 +70,11 @@ public class GameManager : MonoBehaviour
                 EnemyPrefab.transform.Find("MafiaTop").GetComponent<MafiaMoveTest>().WeaponNum = 7;
             }
             else
+            {
                 EnemyPrefab.transform.Find("MafiaTop").GetComponent<MafiaMoveTest>().WeaponNum = 9;
+                if(i == 8)
+                    EnemyPrefab.GetComponent<MafiaMovement>().MovePoint = GameObject.Find("Enemy8Point");
+            }
             EnemyPrefab.name = ("Enemy" + i);
             Instantiate(EnemyPrefab);
         }

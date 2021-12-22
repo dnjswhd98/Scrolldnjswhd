@@ -18,7 +18,7 @@ public class MafiaRay : MonoBehaviour
         TargetMask = LayerMask.GetMask("Player");
 
         Radius = 10.0f;
-        Angle = 95.0f;
+        Angle = 170.0f;
     }
 
     void Update()
