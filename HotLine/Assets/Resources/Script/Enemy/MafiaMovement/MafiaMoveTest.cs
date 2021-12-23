@@ -5,6 +5,7 @@ using UnityEngine;
 public class MafiaMoveTest : MonoBehaviour
 {
     private bool Dead;
+    private int BulletCount;
     public bool Stop;
     public bool Hit;
     public bool FindPlayer;
@@ -29,6 +30,7 @@ public class MafiaMoveTest : MonoBehaviour
         Attack = false;
         Stop = false;
         FireTime = 0;
+        BulletCount = 0;
     }
 
     void Update()
@@ -71,7 +73,7 @@ public class MafiaMoveTest : MonoBehaviour
                         for (int i = 0; i < 16; ++i)
                         {
                             GameObject obj = Instantiate(Resources.Load("Prefap/Bullet") as GameObject);
-                            //++BulletCount;
+                            ++BulletCount;
                             obj.SetActive(false);
 
                             Singleton.GetInstance.GetDisableList.Push(obj);
@@ -109,21 +111,33 @@ public class MafiaMoveTest : MonoBehaviour
                     {
                         for (int i = 0; i < 16; ++i)
                         {
-                            GameObject obj = Instantiate(Resources.Load("Prefap/Bullet") as GameObject);
-                            //++BulletCount;
-                            obj.SetActive(false);
-
-                            Singleton.GetInstance.GetDisableList.Push(obj);
+                            GameObject obj;
+                            GameObject bull = Resources.Load("Prefap/Bullet") as GameObject;
+                            if (bull == null)
+                                Debug.Log("null");
+                            else
+                            {
+                                obj = Instantiate(bull);
+                                //++BulletCount;
+                                if (obj == null)
+                                    Debug.Log("objnull");
+                                else
+                                {
+                                    obj.SetActive(false);
+                                    Singleton.GetInstance.GetDisableList.Push(obj);
+                                }
+                            }
                         }
                     }
+                 
                     GameObject BulletObj = Singleton.GetInstance.GetDisableList.Pop();
-
+                 
                     BulletObj.transform.position = transform.position;
                     BulletObj.transform.rotation = transform.rotation;
                     BulletObj.GetComponent<Bullet>().FireTo = transform.parent.gameObject;
-
+                 
                     BulletObj.SetActive(true);
-
+                 
                     Singleton.GetInstance.GetEnableList.Add(BulletObj);
                 }
                 if (FireTime == 0)

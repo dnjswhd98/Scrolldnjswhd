@@ -15,9 +15,15 @@ public class Bullet : MonoBehaviour
         Rigid.AddForce(transform.right * Speed);
     }
 
+    private void OnDisable()
+    {
+        FireTo = null;
+
+    }
+
     private void OnEnable()
     {
-        if(gameObject.active)
+        if (gameObject.activeSelf)
             Rigid.AddForce(transform.right * Speed);
     }
 
@@ -33,7 +39,6 @@ public class Bullet : MonoBehaviour
             Singleton.GetInstance.GetEnableList.Remove(gameObject);
             this.gameObject.SetActive(false);
             Singleton.GetInstance.GetDisableList.Push(gameObject);
-            FireTo = null;
         }
 
         if (FireTo.transform.tag == "player")
@@ -48,7 +53,6 @@ public class Bullet : MonoBehaviour
                     Player.transform.Find("JaketTop").GetComponent<JaketTop>().WeaponNum;
                 collision.transform.Find("MafiaTop").GetComponent<MafiaMoveTest>().Hit = true;
 
-                FireTo = null;
             }
             else if(collision.transform.tag == "Dog")
             {
@@ -58,7 +62,6 @@ public class Bullet : MonoBehaviour
 
                 collision.GetComponent<DogMove>().Hit = true;
 
-                FireTo = null;
             }
         }
         else if (FireTo.transform.tag == "Enemy")
@@ -69,7 +72,6 @@ public class Bullet : MonoBehaviour
                 this.gameObject.SetActive(false);
                 Singleton.GetInstance.GetDisableList.Push(gameObject);
 
-                FireTo = null;
             }
         }
     }
