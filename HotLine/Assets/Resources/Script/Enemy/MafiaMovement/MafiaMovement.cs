@@ -6,6 +6,7 @@ public class MafiaMovement : MonoBehaviour
 {
     public bool FindPlayer;
     public bool Move;
+    [SerializeField]private bool Dead;
     [SerializeField]private int NodeNum;
     private float angle;
 
@@ -29,44 +30,54 @@ public class MafiaMovement : MonoBehaviour
         EnemyLeg = transform.Find("MafiaLeg").GetComponent<Animator>();
         WayPointList = new List<GameObject>();
         NodeNum = 0;
+        Dead = false;
     }
 
     void Update()
     {
-        if(!FindPlayer)
+        if (transform.Find("MafiaTop").GetComponent<MafiaMoveTest>().Dead)
         {
-            if(MovePoint)
-            {
-                EnemyWayPoint();
-            }
+            Dead = true;
+            Move = false;
         }
-
-        target = transform.position;
-        Player = GameObject.Find("Jaket(Clone)");
-
-        if (FindPlayer)
+        else
         {
-            angle = Mathf.Atan2(Player.transform.position.y - target.y, Player.transform.position.x - target.x) * Mathf.Rad2Deg;
-            this.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-
-            Move = true;
-        }
-
-        if(Move)
-        {
-            if(!FindPlayer)
+            if (!FindPlayer)
             {
-                transform.Translate(Vector3.right * 5.0f * Time.deltaTime, Space.Self);
+                if (MovePoint)
+                {
+                    EnemyWayPoint();
+                }
             }
-            else
+
+            target = transform.position;
+            Player = GameObject.Find("Jaket(Clone)");
+
+            if (FindPlayer)
             {
-                if (!transform.Find("MafiaTop").GetComponent<MafiaMoveTest>().Stop)
+                angle = Mathf.Atan2(Player.transform.position.y - target.y, Player.transform.position.x - target.x) * Mathf.Rad2Deg;
+                this.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+
+                Move = true;
+            }
+
+            if (Move)
+            {
+                if (!FindPlayer)
                 {
                     transform.Translate(Vector3.right * 5.0f * Time.deltaTime, Space.Self);
+                }
+                else
+                {
+                    if (!transform.Find("MafiaTop").GetComponent<MafiaMoveTest>().Stop)
+                    {
+                        transform.Translate(Vector3.right * 5.0f * Time.deltaTime, Space.Self);
+                    }
                 }
             }
         }
         EnemyLeg.SetBool("Walking", Move);
+        EnemyLeg.SetBool("Dead", Dead);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

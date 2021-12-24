@@ -33,20 +33,20 @@ public class Singleton
         }
     }
 
-    public enum Weapone
-    {
-        NONE,
-        BAT,
-        CLUB,
-        KNIFE,
-        KATANA,
-        PIPE,
-        CREWBAR,
-        M16,
-        SHOTGUN,
-        DOUBLEBARREL,
-        UZI
-    };
+    //public enum Weapone
+    //{
+    //    NONE,
+    //    BAT,
+    //    CLUB,
+    //    KNIFE,
+    //    KATANA,
+    //    PIPE,
+    //    CREWBAR,
+    //    M16,
+    //    SHOTGUN,
+    //    DOUBLEBARREL,
+    //    UZI
+    //};
 
     static public List<GameObject> EnemyList = new List<GameObject>();
 
@@ -61,10 +61,5 @@ public class Singleton
             EnemyList.Add(GameObject.Find("Dog" + i + "(Clone)"));
         }
 
-    }
-
-    public void SetEnemyHit(GameObject _obj, bool _hit)
-    {
-        //_obj.GetComponent<MafiaMoveTest>().Hit = _hit;
     }
 }

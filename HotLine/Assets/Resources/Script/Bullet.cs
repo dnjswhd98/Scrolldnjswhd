@@ -18,7 +18,6 @@ public class Bullet : MonoBehaviour
     private void OnDisable()
     {
         FireTo = null;
-
     }
 
     private void OnEnable()
@@ -36,18 +35,14 @@ public class Bullet : MonoBehaviour
     {
         if (collision.transform.tag == "Walls" || collision.transform.tag == "Door")
         {
-            Singleton.GetInstance.GetEnableList.Remove(gameObject);
-            this.gameObject.SetActive(false);
-            Singleton.GetInstance.GetDisableList.Push(gameObject);
+            DisableBullet();
         }
 
         if (FireTo.transform.tag == "player")
         {
             if (collision.transform.tag == "Enemy")
             {
-                Singleton.GetInstance.GetEnableList.Remove(gameObject);
-                this.gameObject.SetActive(false);
-                Singleton.GetInstance.GetDisableList.Push(gameObject);
+                DisableBullet();
 
                 collision.transform.Find("MafiaTop").GetComponent<MafiaMoveTest>().PlayerWeapon =
                     Player.transform.Find("JaketTop").GetComponent<JaketTop>().WeaponNum;
@@ -56,9 +51,7 @@ public class Bullet : MonoBehaviour
             }
             else if(collision.transform.tag == "Dog")
             {
-                Singleton.GetInstance.GetEnableList.Remove(gameObject);
-                this.gameObject.SetActive(false);
-                Singleton.GetInstance.GetDisableList.Push(gameObject);
+                DisableBullet();
 
                 collision.GetComponent<DogMove>().Hit = true;
 
@@ -68,11 +61,15 @@ public class Bullet : MonoBehaviour
         {
             if (collision.transform.tag == "player")
             {
-                Singleton.GetInstance.GetEnableList.Remove(gameObject);
-                this.gameObject.SetActive(false);
-                Singleton.GetInstance.GetDisableList.Push(gameObject);
-
+                DisableBullet();
             }
         }
+    }
+
+    void DisableBullet()
+    {
+        Singleton.GetInstance.GetEnableList.Remove(gameObject);
+        this.gameObject.SetActive(false);
+        Singleton.GetInstance.GetDisableList.Push(gameObject);
     }
 }

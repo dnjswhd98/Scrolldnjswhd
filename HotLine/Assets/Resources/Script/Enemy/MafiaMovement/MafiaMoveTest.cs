@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class MafiaMoveTest : MonoBehaviour
 {
-    private bool Dead;
-    private int BulletCount;
+    public bool Dead;
     public bool Stop;
     public bool Hit;
     public bool FindPlayer;
@@ -30,7 +29,6 @@ public class MafiaMoveTest : MonoBehaviour
         Attack = false;
         Stop = false;
         FireTime = 0;
-        BulletCount = 0;
     }
 
     void Update()
@@ -54,7 +52,6 @@ public class MafiaMoveTest : MonoBehaviour
             Singleton.EnemyList.Remove(transform.parent.gameObject);
             Hit = false;
             transform.parent.GetComponent<CapsuleCollider2D>().isTrigger = true;
-            transform.parent.GetComponent<MafiaMovement>().enabled = false;
             transform.parent.GetComponent<MafiaRay>().enabled = false;
             transform.parent.GetComponent<CapsuleCollider2D>().enabled = false;
 
@@ -73,7 +70,6 @@ public class MafiaMoveTest : MonoBehaviour
                         for (int i = 0; i < 16; ++i)
                         {
                             GameObject obj = Instantiate(Resources.Load("Prefap/Bullet") as GameObject);
-                            ++BulletCount;
                             obj.SetActive(false);
 
                             Singleton.GetInstance.GetDisableList.Push(obj);
