@@ -20,26 +20,26 @@ public class Door : MonoBehaviour
     void Update()
     {
         transform.position = DoorPosition;
-        if(transform.rotation.z >= DoorRot.z + 110.0f)
-        {
-            transform.eulerAngles = new Vector3(0.0f, 0.0f, DoorRot.z + 110.0f);
-        }
-        else if(transform.rotation.z <= DoorRot.z - 110.0f)
-        {
-            transform.eulerAngles = new Vector3(0.0f, 0.0f, DoorRot.z - 110.0f);
-        }
+        //if(transform.rotation.z >= DoorRot.z + 110.0f)
+        //{
+        //    transform.eulerAngles = new Vector3(0.0f, 0.0f, DoorRot.z + 110.0f);
+        //}
+        //else if(transform.rotation.z <= DoorRot.z - 110.0f)
+        //{
+        //    transform.eulerAngles = new Vector3(0.0f, 0.0f, DoorRot.z - 110.0f);
+        //}
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.transform.tag == "player")
         {
-            PlayerPos = collision.transform.position;
+            //PlayerPos = collision.transform.position;
             collision.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
             //Move = true;
-            Temp = transform.position - PlayerPos.normalized;
-            Temp.x = 0.0f;
-            GetComponent<Rigidbody2D>().AddForce(Temp * -2.0f);
+            //Temp = transform.position - PlayerPos.normalized;
+            //Temp.x = 0.0f;
+            //GetComponent<Rigidbody2D>().AddForce(Temp * -2.0f);
         }
     }
     private void OnCollisionExit2D(Collision2D collision)

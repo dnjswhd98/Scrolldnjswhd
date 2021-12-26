@@ -6,7 +6,7 @@ public class der : MonoBehaviour
 {
     void Start()
     {
-        GetComponent<Rigidbody2D>().enabled
+        //GetComponent<Rigidbody2D>().enabled
     }
 
     void Update()
