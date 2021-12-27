@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: 3fdff573653e3f24f9d35475bd8620fc
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 8242455920637676941
+    second: sprPBackEaten_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -101,11 +104,32 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: sprPBackEaten_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 18
+        width: 49
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8d8c6a4df5136270800000000000000
+      internalID: 8242455920637676941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 4a748f466b775c243a205b1542d80a30
     internalID: 0
     vertices: []
     indices: 

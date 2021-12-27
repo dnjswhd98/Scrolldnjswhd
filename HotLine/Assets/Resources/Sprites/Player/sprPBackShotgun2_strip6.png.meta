@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: 4f13e46e26ef05048add0ac49f71de6d
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -5216741691550223172
+    second: sprPBackShotgun2_strip6_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -101,11 +104,32 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: sprPBackShotgun2_strip6_0
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 18
+        width: 49
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb4bd2e22196a97b0800000000000000
+      internalID: -5216741691550223172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 2c70dc801f346eb458c2b78f3b02152b
     internalID: 0
     vertices: []
     indices: 

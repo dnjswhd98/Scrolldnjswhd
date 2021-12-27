@@ -59,6 +59,11 @@ public class MafiaMovement : MonoBehaviour
                 this.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
                 Move = true;
+                if (GameObject.FindWithTag("player").GetComponent<JaketMoving>().Dead)
+                {
+                    FindPlayer = false;
+                    Move = false;
+                }
             }
 
             if (Move)
@@ -120,7 +125,7 @@ public class MafiaMovement : MonoBehaviour
             if (!Move)
                 Move = true;
         }
-        else if (MovePoint.name == "Enemy2Point" && gameObject.name == "Enemy2(Clone)")
+        else if (MovePoint.name == "Enemy2Point" && gameObject.name == "Enemy7(Clone)")
         {
             if (WayPointList.Count < MovePoint.transform.childCount)
             {

@@ -35,7 +35,7 @@ public class MafiaMoveTest : MonoBehaviour
     {
         Player = GameObject.Find("Jaket(Clone)");
         Direction = (transform.position - Player.transform.position).normalized;
-        if(Hit)
+        if (Hit)
         {
             Attack = true;
             Rigid.AddForce(Direction * 1000);
@@ -44,6 +44,66 @@ public class MafiaMoveTest : MonoBehaviour
             if (PlayerWeapon >= 7)
             {
                 Deadrand = Random.Range(0, 4);
+            }
+
+            switch (WeaponNum)
+            {
+                case 1:
+                    {
+                        GameObject obj = Resources.Load("Prefap/WeaponItem/Bat") as GameObject;
+                        obj.transform.position = transform.position;
+                        obj.transform.rotation = transform.rotation;
+                        obj.GetComponent<WeaponItems>().WeaponItemNum = WeaponNum;
+                        Instantiate(obj);
+                    }
+                    break;
+                case 2:
+                    {
+                        GameObject obj = Resources.Load("Prefap/WeaponItem/Club") as GameObject;
+                        obj.transform.position = transform.position;
+                        obj.transform.rotation = transform.rotation;
+                        obj.GetComponent<WeaponItems>().WeaponItemNum = WeaponNum;
+                        Instantiate(obj);
+                    }
+                    break;
+                case 3:
+                    {
+                        GameObject obj = Resources.Load("Prefap/WeaponItem/Knife") as GameObject;
+                        obj.transform.position = transform.position;
+                        obj.transform.rotation = transform.rotation;
+                        obj.GetComponent<WeaponItems>().WeaponItemNum = WeaponNum;
+                        Instantiate(obj);
+                    }
+                    break;
+                case 7:
+                    {
+                        GameObject obj = Resources.Load("Prefap/WeaponItem/M16") as GameObject;
+                        obj.transform.position = transform.position;
+                        obj.transform.rotation = transform.rotation;
+                        obj.GetComponent<WeaponItems>().WeaponItemNum = WeaponNum;
+                        Instantiate(obj);
+                    }
+                    break;
+                case 8:
+                    {
+                        GameObject obj = Resources.Load("Prefap/WeaponItem/Shotgun") as GameObject;
+                        obj.transform.position = transform.position;
+                        obj.transform.rotation = transform.rotation;
+                        obj.GetComponent<WeaponItems>().WeaponItemNum = WeaponNum;
+                        Instantiate(obj);
+                    }
+                    break;
+                case 9:
+                    {
+                        GameObject obj = Resources.Load("Prefap/WeaponItem/DoubleB") as GameObject;
+                        obj.transform.position = transform.position;
+                        obj.transform.rotation = transform.rotation;
+                        obj.GetComponent<WeaponItems>().WeaponItemNum = WeaponNum;
+                        Instantiate(obj);
+                    }
+                    break;
+                default:
+                    break;
             }
         }
 
@@ -89,6 +149,10 @@ public class MafiaMoveTest : MonoBehaviour
 
                         Singleton.GetInstance.GetEnableList.Add(BulletObj);
                     }
+                    if (WeaponNum == 8)
+                        Singleton.GetInstance.PlayingSound(20);
+                    else
+                        Singleton.GetInstance.PlayingSound(8);
                 }
                 if (FireTime == 0)
                     Attack = false;
@@ -114,7 +178,6 @@ public class MafiaMoveTest : MonoBehaviour
                             else
                             {
                                 obj = Instantiate(bull);
-                                //++BulletCount;
                                 if (obj == null)
                                     Debug.Log("objnull");
                                 else
@@ -125,17 +188,20 @@ public class MafiaMoveTest : MonoBehaviour
                             }
                         }
                     }
-                 
+
                     GameObject BulletObj = Singleton.GetInstance.GetDisableList.Pop();
-                 
+
                     BulletObj.transform.position = transform.position;
                     BulletObj.transform.rotation = transform.rotation;
                     BulletObj.GetComponent<Bullet>().FireTo = transform.parent.gameObject;
-                 
+
+                    Singleton.GetInstance.PlayingSound(10);
+
                     BulletObj.SetActive(true);
-                 
+
                     Singleton.GetInstance.GetEnableList.Add(BulletObj);
                 }
+
                 if (FireTime == 0)
                     Attack = false;
 
@@ -143,10 +209,14 @@ public class MafiaMoveTest : MonoBehaviour
 
                 if (FireTime > 10)
                     FireTime = 0;
-            }
-            
-        }
 
+                if (GameObject.FindWithTag("player").GetComponent<JaketMoving>().Dead)
+                {
+                    FindPlayer = false;
+                }
+            }
+
+        }
         Anime.SetBool("Dead", Dead);
         Anime.SetBool("Attack", Attack);
         Anime.SetInteger("WeaponNum", WeaponNum);
@@ -161,7 +231,15 @@ public class MafiaMoveTest : MonoBehaviour
             if (FindPlayer)
             {
                 if (WeaponNum < 7)
+                {
                     Attack = true;
+                    if (Attack)
+                    {
+                        collision.transform.Find("JaketTop").GetComponent<JaketTop>().EnemyWeapon = WeaponNum;
+                        collision.transform.Find("JaketTop").GetComponent<JaketTop>().Dead = true;
+                        Singleton.GetInstance.PlayingSound(11);
+                    }
+                }
                 else
                     Stop = true;
             }

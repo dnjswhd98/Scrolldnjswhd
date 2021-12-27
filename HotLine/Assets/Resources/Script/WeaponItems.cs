@@ -31,17 +31,16 @@ public class WeaponItems : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-        if(Throw)
+        if (collision.transform.tag == "Walls" || collision.tag == "Door")
         {
-            if (collision.transform.tag == "Walls")
-            {
-                var speed = lastVelocity.magnitude;
-                var dir = Vector2.Reflect(lastVelocity.normalized, collision.bounds.ClosestPoint(transform.position).normalized);
-                Rigid.velocity = dir * Mathf.Max(speed, 0f);
+            var speed = lastVelocity.magnitude;
+            var dir = Vector2.Reflect(lastVelocity.normalized, collision.bounds.ClosestPoint(transform.position).normalized);
+            Rigid.velocity = dir * Mathf.Max(speed, 0f);
 
-            }
         }
+        
+        
+        
         
     }
 }

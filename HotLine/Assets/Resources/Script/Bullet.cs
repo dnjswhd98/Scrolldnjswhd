@@ -42,26 +42,35 @@ public class Bullet : MonoBehaviour
         {
             if (collision.transform.tag == "Enemy")
             {
-                DisableBullet();
 
                 collision.transform.Find("MafiaTop").GetComponent<MafiaMoveTest>().PlayerWeapon =
                     Player.transform.Find("JaketTop").GetComponent<JaketTop>().WeaponNum;
                 collision.transform.Find("MafiaTop").GetComponent<MafiaMoveTest>().Hit = true;
 
+                DisableBullet();
+
+                Singleton.GetInstance.PlayingSound(11);
             }
             else if(collision.transform.tag == "Dog")
             {
-                DisableBullet();
-
                 collision.GetComponent<DogMove>().Hit = true;
 
+                DisableBullet();
+
+                Singleton.GetInstance.PlayingSound(11);
             }
         }
         else if (FireTo.transform.tag == "Enemy")
         {
             if (collision.transform.tag == "player")
             {
+                collision.transform.Find("JaketTop").GetComponent<JaketTop>().EnemyWeapon =
+                    FireTo.transform.Find("MafiaTop").GetComponent<MafiaMoveTest>().WeaponNum;
+                collision.transform.Find("JaketTop").GetComponent<JaketTop>().Dead = true;
+
                 DisableBullet();
+
+                Singleton.GetInstance.PlayingSound(11);
             }
         }
     }

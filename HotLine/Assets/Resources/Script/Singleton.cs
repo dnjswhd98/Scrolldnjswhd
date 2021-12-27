@@ -33,6 +33,10 @@ public class Singleton
         }
     }
 
+    private SoundManager Sound1 = GameObject.Find("Sound1").GetComponent<SoundManager>();
+    private SoundManager Sound2 = GameObject.Find("Sound2").GetComponent<SoundManager>();
+    private SoundManager Sound3 = GameObject.Find("Sound3").GetComponent<SoundManager>();
+
     //public enum Weapone
     //{
     //    NONE,
@@ -61,5 +65,20 @@ public class Singleton
             EnemyList.Add(GameObject.Find("Dog" + i + "(Clone)"));
         }
 
+    }
+
+    public void PlayingSound(int ClipNum)
+    {
+        if(!Sound1.Audios.isPlaying)
+        {
+            Sound1.SetAudio(ClipNum);
+        }
+        else
+        {
+            if(!Sound2.Audios.isPlaying)
+                Sound2.SetAudio(ClipNum);
+            else
+                Sound3.SetAudio(ClipNum);
+        }
     }
 }

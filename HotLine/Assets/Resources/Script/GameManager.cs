@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -62,6 +63,13 @@ public class GameManager : MonoBehaviour
 
             }
         }
+        if(GameObject.FindWithTag("player").GetComponent<JaketMoving>().Dead)
+        {
+            if(Input.GetKeyDown(KeyCode.R))
+            {
+                SceneManager.LoadScene(0);
+            }
+        }
     }
 
     private void SpawnObject()
@@ -74,6 +82,7 @@ public class GameManager : MonoBehaviour
             for (int i = 0; i < ESpawnList.Count; ++i)
             {
                 EnemyPrefab.transform.position = GameObject.Find("EnemySpawn" + i).transform.position;
+                EnemyPrefab.transform.rotation = GameObject.Find("EnemySpawn" + i).transform.rotation;
                 if (i < 2)
                 {
                     EnemyPrefab.transform.Find("MafiaTop").GetComponent<MafiaMoveTest>().WeaponNum = 1;
@@ -83,8 +92,6 @@ public class GameManager : MonoBehaviour
                 else if (i >= 2 && i < 4)
                 {
                     EnemyPrefab.transform.Find("MafiaTop").GetComponent<MafiaMoveTest>().WeaponNum = 2;
-                    if (i == 2)
-                        EnemyPrefab.GetComponent<MafiaMovement>().MovePoint = GameObject.Find("Enemy2Point");
                 }
                 else if (i == 4)
                     EnemyPrefab.transform.Find("MafiaTop").GetComponent<MafiaMoveTest>().WeaponNum = 3;
@@ -95,6 +102,8 @@ public class GameManager : MonoBehaviour
                 else
                 {
                     EnemyPrefab.transform.Find("MafiaTop").GetComponent<MafiaMoveTest>().WeaponNum = 9;
+                    if (i == 7)
+                        EnemyPrefab.GetComponent<MafiaMovement>().MovePoint = GameObject.Find("Enemy2Point");
                     if (i == 8)
                         EnemyPrefab.GetComponent<MafiaMovement>().MovePoint = GameObject.Find("Enemy8Point");
                 }

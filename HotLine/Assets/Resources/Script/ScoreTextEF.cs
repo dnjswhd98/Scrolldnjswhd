@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ScoreTextEF : MonoBehaviour
 {
     private Text uiText;
+    private int Count;
     private bool RotF;
     private Vector3 rot; 
 
@@ -14,15 +15,20 @@ public class ScoreTextEF : MonoBehaviour
         uiText = GetComponent<Text>();
         RotF = false;
         rot = new Vector3(0.0f, 0.0f, 0.02f);
+        Count = 0;
     }
 
     void Update()
     {
-        if (Singleton.EnemyList.Count != 0)
-            uiText.text = "Enemy " + Singleton.EnemyList.Count + " LEFT";
+        if (!GameObject.FindWithTag("player").GetComponent<JaketMoving>().Dead)
+        {
+            if (Singleton.EnemyList.Count != 0)
+                uiText.text = "Enemy " + Singleton.EnemyList.Count + " LEFT";
+            else
+                uiText.text = "Floor Clear!";
+        }
         else
-            uiText.text = "Floor Clear!";
-
+            uiText.text = "YOU'RE DEAD!";
         //if (!RotF)
         //{
         //    uiText.transform.Rotate(rot);

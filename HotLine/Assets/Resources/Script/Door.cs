@@ -7,12 +7,12 @@ public class Door : MonoBehaviour
     private Vector3 DoorPosition;
     private Vector3 PlayerPos;
     private Vector3 Temp;
-    private Quaternion DoorRot;
+    [SerializeField]private Vector3 DoorRot;
     [SerializeField]private Quaternion LRot;
 
     void Start()
     {
-        DoorRot = transform.rotation;
+        DoorRot = transform.localEulerAngles;
         LRot.z = DoorRot.z + 110.0f;
         DoorPosition = transform.position;
     }
@@ -35,18 +35,20 @@ public class Door : MonoBehaviour
         if(collision.transform.tag == "player")
         {
             //PlayerPos = collision.transform.position;
-            collision.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
+            //collision.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
             //Move = true;
             //Temp = transform.position - PlayerPos.normalized;
             //Temp.x = 0.0f;
             //GetComponent<Rigidbody2D>().AddForce(Temp * -2.0f);
+            transform.eulerAngles = new Vector3(0.0f, 0.0f, DoorRot.z + 110.0f);
+            Singleton.GetInstance.PlayingSound(7);
         }
     }
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.transform.tag == "player")
-        {
-            collision.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
-        }
-    }
+    //private void OnCollisionExit2D(Collision2D collision)
+    //{
+    //    if (collision.transform.tag == "player")
+    //    {
+    //        collision.gameObject.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+    //    }
+    //}
 }
