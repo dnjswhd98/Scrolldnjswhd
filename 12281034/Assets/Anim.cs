@@ -12,14 +12,9 @@ public class Anim : MonoBehaviour
         Anime = transform.GetComponent<Animator>();
     }
 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        //Anime.SetFloat("Speed",Input.GetAxis))
+        Anime.SetFloat("Speed", Input.GetAxis("Vertical"));
+        Anime.SetFloat("Hor", Input.GetAxis("Horizontal"));
     }
 }

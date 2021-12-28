@@ -115,6 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fac8fc50360ce5f43833e4cec4655b42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Dead: 0
 --- !u!1 &1959156149481716562
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,7 +232,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d366d2803d73dd4aa5db83d588b2f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Dead: 0
+  EnemyWeapon: 0
   WeaponNum: 0
+  GetNewWeapon: 0
   MaxRound: 0
   Round: 0
 --- !u!61 &4171541248307204626
@@ -287,7 +291,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1959156150187048389}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.75, y: 16.26, z: 0}
+  m_LocalPosition: {x: -16.750002, y: 16.260002, z: 0}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children:
   - {fileID: 1959156148358569705}
@@ -323,6 +327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6decfa8cab6f144c9fdf6dfec98b034, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Dead: 0
 --- !u!50 &7405165126951037668
 Rigidbody2D:
   serializedVersion: 4

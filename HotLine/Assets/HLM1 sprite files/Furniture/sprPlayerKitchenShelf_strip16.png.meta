@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: f8e302ac0a77db044ac4ddf72b4fb739
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 99839366232036576
+    second: sprPlayerKitchenShelf_strip16_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -101,11 +104,32 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: sprPlayerKitchenShelf_strip16_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6
+        width: 30
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e45cd6ef53b26100800000000000000
+      internalID: 99839366232036576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 1920031749417e54db4409cc7419c51a
     internalID: 0
     vertices: []
     indices: 

@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -67,7 +66,7 @@ public class GameManager : MonoBehaviour
         {
             if(Input.GetKeyDown(KeyCode.R))
             {
-                SceneManager.LoadScene(0);
+                ReStart();
             }
         }
     }
@@ -120,5 +119,20 @@ public class GameManager : MonoBehaviour
 
             Singleton.GetInstance.SetEnemyList();
         }
+    }
+
+    private void ReStart()
+    {
+        for (int i = 0; i < Singleton.EnemyList.Count; ++i)
+        {
+           Singleton.EnemyList.RemoveAt(i);
+        }
+
+        Destroy(GameObject.FindWithTag("player").gameObject);
+        Destroy(GameObject.FindWithTag("Enemy").gameObject);
+        Destroy(GameObject.FindWithTag("Dog").gameObject);
+        Destroy(GameObject.FindWithTag("Item").gameObject);
+
+        Start();
     }
 }

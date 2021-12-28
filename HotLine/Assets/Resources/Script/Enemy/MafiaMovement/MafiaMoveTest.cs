@@ -228,20 +228,23 @@ public class MafiaMoveTest : MonoBehaviour
     {
         if (collision.transform.tag == "player")
         {
-            if (FindPlayer)
+            if (!Dead)
             {
-                if (WeaponNum < 7)
+                if (FindPlayer)
                 {
-                    Attack = true;
-                    if (Attack)
+                    if (WeaponNum < 7)
                     {
-                        collision.transform.Find("JaketTop").GetComponent<JaketTop>().EnemyWeapon = WeaponNum;
-                        collision.transform.Find("JaketTop").GetComponent<JaketTop>().Dead = true;
-                        Singleton.GetInstance.PlayingSound(11);
+                        Attack = true;
+                        if (Attack)
+                        {
+                            collision.transform.Find("JaketTop").GetComponent<JaketTop>().EnemyWeapon = WeaponNum;
+                            collision.transform.Find("JaketTop").GetComponent<JaketTop>().Dead = true;
+                            Singleton.GetInstance.PlayingSound(11);
+                        }
                     }
+                    else
+                        Stop = true;
                 }
-                else
-                    Stop = true;
             }
         }
     }
