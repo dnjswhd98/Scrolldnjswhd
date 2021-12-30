@@ -113,9 +113,16 @@ public class Anim : MonoBehaviour
             yield return new WaitForSeconds(Time.deltaTime);
             CombineaionTime -= Time.deltaTime;
 
+            Combineaion = false;
+
+            if (Input.GetKeyDown(KeyCode.Keypad7))
+            {
+                Combineaion = true;
+            }
+
             if (CombineaionTime <= 0)
             {
-                Combineaion = false;
+                
                 break;
             }
 
