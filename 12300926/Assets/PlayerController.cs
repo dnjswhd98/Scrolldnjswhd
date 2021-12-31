@@ -14,6 +14,11 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        var Hor = Input.GetAxis("Horizontal");
+        var Ver = Input.GetAxis("Vertical");
+
+        transform.Translate(Hor * 5.0f * Time.deltaTime, 0.0f, Ver * 5.0f * Time.deltaTime);
+
         if(Input.GetMouseButtonDown(1))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
